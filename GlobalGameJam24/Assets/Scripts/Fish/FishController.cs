@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FishController : MonoBehaviour
 {
+	const float WATER_BOTTOM = -5f;
+
 	public FishTypeEnum FishType;
 	public float PathfindCornerDistance = .6f;
 	public bool IsLeftToRight;
@@ -39,6 +41,8 @@ public class FishController : MonoBehaviour
 	{
 		// TODO: check if fish is in water
 		Pathfind();
+
+		CheckOutOfRange();
 	}
 
 
@@ -90,5 +94,16 @@ public class FishController : MonoBehaviour
 	protected void HasReachedEndPoint()
 	{
 		FishManager.Instance.RecycleFish(this);
+	}
+
+	/// <summary>
+	/// if the fish falls below the water (out of view) without reaching end point, also recycle it.
+	/// </summary>
+	protected void CheckOutOfRange()
+	{
+		if (transform.position.y < WATER_BOTTOM)
+		{
+			FishManager.Instance.RecycleFish(this);
+		}
 	}
 }
