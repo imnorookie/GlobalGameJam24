@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6665114663703196789}
   m_Layer: 7
   m_Name: Fish
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,8 +50,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FishType: 0
   PathfindCornerDistance: 0.8
+  BiteDistance: 0.4
   IsLeftToRight: 1
   Model: {fileID: 6782399003708005813}
+  OutWaterHeight: 1.5
+  InWaterHeight: 0.25
+  ExcludeLayerMaskInWater:
+    serializedVersion: 2
+    m_Bits: 6912
+  ExcludeLayerMaskOutWater:
+    serializedVersion: 2
+    m_Bits: 0
+  _isInWaterCollisionMode: 0
 --- !u!114 &79333923521630809
 MonoBehaviour:
   m_ObjectHideFlags: 0

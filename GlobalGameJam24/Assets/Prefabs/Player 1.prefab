@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74be235b0711a2a48b2484d1e2782376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsStunned: 0
   m_pullOarKey: 119
   m_pushOarKey: 115
   m_rowOarForwardKey: 97
@@ -171,6 +172,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Oar Parent
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129652753331608958, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -3.9997177
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129652753331608958, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 1.4439961
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -284,6 +295,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8341524519766238875, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
+        type: 3}
+      propertyPath: OarController
+      value: 
+      objectReference: {fileID: 7563356951247603629}
     - target: {fileID: 9120940444707213614, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
         type: 3}
       propertyPath: m_Name
