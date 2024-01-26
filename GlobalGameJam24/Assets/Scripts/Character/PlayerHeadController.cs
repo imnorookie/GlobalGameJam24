@@ -18,6 +18,8 @@ public class PlayerHeadController : MonoBehaviour
 			var fishController = collision.gameObject.GetComponent<FishController>();
 
 			fishController?.Bite(transform, OarController.StunDuration);
+
+			OarController.Stun();
 		}
 	}
 

@@ -68,8 +68,6 @@ public class OarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsStunned)
-        	return;
 
         _inputX = 0;
         _inputY = 0;
@@ -88,6 +86,10 @@ public class OarController : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+
+		if (IsStunned)
+			return;
+
 		// resolve movement
 		if (_inputX != 0)
 			MoveX();
@@ -100,7 +102,7 @@ public class OarController : MonoBehaviour
 	/// Stuns the character, disables input and movement for a short time
 	/// </summary>
 	/// <param name="stunDuration"></param>
-	public void Stun(float stunDuration)
+	public void Stun()
 	{
 		if (_stunCoroutine != null)
 			StopCoroutine(_stunCoroutine);
@@ -147,7 +149,6 @@ public class OarController : MonoBehaviour
 	protected IEnumerator StunCoroutine()
 	{
 		IsStunned = true;
-		OnStun?.Invoke();
 
 		yield return new WaitForSeconds(StunDuration);
 
