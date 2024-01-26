@@ -89,16 +89,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74be235b0711a2a48b2484d1e2782376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsStunned: 0
   m_pullOarKey: 119
   m_pushOarKey: 115
   m_rowOarForwardKey: 97
   m_rowOarBackwardKey: 100
-  m_oarRotPt: {fileID: 3506116239644227538}
-  m_oarRb: {fileID: 7405829248459281584}
+  m_oarRb: {fileID: 6387567889312860386}
   m_pushPullForce: 8
   m_rowOarForce: 0.2
   m_maxYOffset: 0.6
+  IsStunned: 0
+  StunDuration: 1.5
+  OnStun:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &4977959930270853814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -157,16 +160,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2999968956197611790, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
-        type: 3}
-      propertyPath: m_Density
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3516483400197799684, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.5010724
-      objectReference: {fileID: 0}
     - target: {fileID: 6219835626884557121, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
         type: 3}
       propertyPath: OarController
@@ -177,11 +170,6 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 1209741404819677882}
-    - target: {fileID: 8341524519766238875, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
-        type: 3}
-      propertyPath: OarController
-      value: 
-      objectReference: {fileID: 7563356951247603629}
     - target: {fileID: 9120940444707213614, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
         type: 3}
       propertyPath: m_Name
@@ -321,6 +309,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2314576028039100145}
     m_Modifications:
+    - target: {fileID: 3127362092045758562, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
+        type: 3}
+      propertyPath: m_ConnectedRigidBody
+      value: 
+      objectReference: {fileID: 1209741404819677882}
     - target: {fileID: 4559187677863538590, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
         type: 3}
       propertyPath: BoatRigidbody
@@ -379,7 +372,7 @@ PrefabInstance:
     - target: {fileID: 6999034975665363032, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
         type: 3}
       propertyPath: m_Name
-      value: Oar Parent
+      value: Oar
       objectReference: {fileID: 0}
     - target: {fileID: 8129652753331608958, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
         type: 3}
@@ -397,9 +390,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8188513318859227441}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &7405829248459281584 stripped
+--- !u!50 &6387567889312860386 stripped
 Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 1685959296484234625, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
+  m_CorrespondingSourceObject: {fileID: 2956123175098223059, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
     type: 3}
   m_PrefabInstance: {fileID: 8188513318859227441}
   m_PrefabAsset: {fileID: 0}

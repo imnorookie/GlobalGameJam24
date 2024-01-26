@@ -26,13 +26,14 @@ public class OarRowingController : MonoBehaviour
 
 
 	protected float _underwaterVelocity;
+	protected Vector3 _generalVelocity;
 	protected Vector3 _lastPosition;
 	protected Vector3 _boatLeftPoint;
 	protected Vector3 _boatRightPoint;
 	protected Vector3 _pushForce;
 	protected bool _wasUnderWaterLastFrame;
 	public bool IsUnderWater => transform.position.y < WaterHeight;
-
+	public float VelocityMagnitude => _generalVelocity.magnitude;
 
 	private void FixedUpdate()
 	{
@@ -56,14 +57,15 @@ public class OarRowingController : MonoBehaviour
 
 	private void UpdateVelocity()
 	{
-		if (!IsUnderWater)
-		{
-			_underwaterVelocity = 0;
-			return;
-		}
 
-		var immediateVelocity = transform.position.x - _lastPosition.x;
-		_underwaterVelocity = Mathf.MoveTowards(_underwaterVelocity, immediateVelocity, LerpSpeed * Time.fixedDeltaTime);
+		var immediateVelocity = transform.position - _lastPosition;
+
+		_generalVelocity = Vector3.MoveTowards(_generalVelocity, immediateVelocity, LerpSpeed * Time.fixedDeltaTime);
+
+		if (IsUnderWater)
+			_underwaterVelocity = Mathf.MoveTowards(_underwaterVelocity, immediateVelocity.x, LerpSpeed * Time.fixedDeltaTime);
+		else
+			_underwaterVelocity = 0;
 	}
 
 	private void PushBoat()
