@@ -15,12 +15,16 @@ public class PlayerHeadController : MonoBehaviour
 	{
 		if (collision.gameObject.CompareTag("Fish"))
 		{
-			var fishController = collision.gameObject.GetComponent<FishController>();
-
-			fishController?.Bite(transform, OarController.StunDuration);
-
-			OarController.Stun();
+			CollisionWithFish(collision);
 		}
 	}
 
+	private void CollisionWithFish(Collider2D collision)
+	{
+		var fishController = collision.gameObject.GetComponent<FishController>();
+
+		fishController?.Bite(transform, OarController.StunDuration);
+
+		OarController.Stun();
+	}
 }
