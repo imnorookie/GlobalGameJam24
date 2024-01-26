@@ -52,6 +52,15 @@ MonoBehaviour:
   PathfindCornerDistance: 0.8
   IsLeftToRight: 1
   Model: {fileID: 6782399003708005813}
+  EnableHeight: 1.5
+  DisableHeight: 0.25
+  ExcludeLayerMaskInWater:
+    serializedVersion: 2
+    m_Bits: 4608
+  ExcludeLayerMaskOutWater:
+    serializedVersion: 2
+    m_Bits: 0
+  _isInWaterCollisionMode: 0
 --- !u!114 &79333923521630809
 MonoBehaviour:
   m_ObjectHideFlags: 0

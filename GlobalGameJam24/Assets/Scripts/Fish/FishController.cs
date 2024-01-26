@@ -13,10 +13,23 @@ public class FishController : MonoBehaviour
 	[Header("Components")]
 	public Transform Model;
 
-	FishSwimAction _fishSwimAction;
+	[Header("Out of water")]
+	[Tooltip("The world height which the fish's collider becomes active")]
+	public float OutWaterHeight = 1.5f;
+	[Tooltip("The world height which the fish's collider becomes inactive")]
+	public float InWaterHeight = 0.25f;
+	public LayerMask ExcludeLayerMaskInWater;
+	public LayerMask ExcludeLayerMaskOutWater;
+
+	protected Rigidbody2D _rigidbody;
+	protected FishSwimAction _fishSwimAction;
 	protected List<Vector3> _pathPoints = new List<Vector3>();
 	protected int _currentPathIndex = 0;
 	protected float _distanceToNextPoint = 0f;
+
+	// used to switch between in water and out of water rigidbody exclude layers settings.
+	[SerializeField]
+	protected bool _isInWaterCollisionMode = false;
 
 
 	public enum FishTypeEnum
@@ -30,22 +43,47 @@ public class FishController : MonoBehaviour
 
 	private void Awake()
 	{
+		_rigidbody = GetComponent<Rigidbody2D>();
 		_fishSwimAction = GetComponent<FishSwimAction>();
 	}
 	private void Start()
 	{
 		if (_pathPoints.Count == 0)
 			Initialize(IsLeftToRight);
+
+		ChangeInWaterCollisionMode(true);
 	}
 
 	private void FixedUpdate()
 	{
+		UpdateInWaterCollisionMode();
+
 		// TODO: check if fish is in water
 		Pathfind();
 
 		CheckOutOfRange();
 	}
 
+
+	public void UpdateInWaterCollisionMode()
+	{
+		if (_isInWaterCollisionMode && 
+			transform.position.y > OutWaterHeight)
+		{
+			ChangeInWaterCollisionMode(false);
+		}
+		else if (!_isInWaterCollisionMode &&
+			transform.position.y < InWaterHeight)
+		{
+			ChangeInWaterCollisionMode(true);
+		}
+	}
+
+	public void ChangeInWaterCollisionMode(bool isInWater)
+	{
+		_rigidbody.excludeLayers = isInWater ? ExcludeLayerMaskInWater : ExcludeLayerMaskOutWater;
+		_isInWaterCollisionMode = isInWater;
+	}
 
 	public void Initialize(bool isLeftToRight)
 	{

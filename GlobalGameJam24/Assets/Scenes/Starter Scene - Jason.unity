@@ -139,12 +139,12 @@ PrefabInstance:
     - target: {fileID: 3442231910311820350, guid: d918cfe29fd921940a60742b0aebbb1a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.054
+      value: -4.13
       objectReference: {fileID: 0}
     - target: {fileID: 3442231910311820350, guid: d918cfe29fd921940a60742b0aebbb1a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.134
+      value: 3.82
       objectReference: {fileID: 0}
     - target: {fileID: 3442231910311820350, guid: d918cfe29fd921940a60742b0aebbb1a,
         type: 3}
@@ -186,6 +186,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6530957429637921476, guid: d918cfe29fd921940a60742b0aebbb1a,
+        type: 3}
+      propertyPath: ExcludeLayerMaskInWater.m_Bits
+      value: 4608
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -209,6 +214,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3561d8dceb3479244ba53e6bb1a95d3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StunDuration: 0.5
+  OarController: {fileID: 1651706363}
+  OnStun:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &1470829222
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -262,6 +272,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1651706363 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7563356951247603629, guid: 94e9744baa86a7349839c77d7805f4f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 16730551498758344}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74be235b0711a2a48b2484d1e2782376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &16730551498758344
 PrefabInstance:
   m_ObjectHideFlags: 0
