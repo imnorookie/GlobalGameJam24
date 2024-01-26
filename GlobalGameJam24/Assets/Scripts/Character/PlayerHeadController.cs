@@ -21,6 +21,10 @@ public class PlayerHeadController : MonoBehaviour
 	{
 		if (collision.gameObject.CompareTag("Fish"))
 		{
+			var fishController = collision.gameObject.GetComponent<FishController>();
+
+			fishController?.Bite(transform, StunDuration);
+
 			if (_stunCoroutine != null)
 				StopCoroutine(_stunCoroutine);
 
@@ -30,11 +34,11 @@ public class PlayerHeadController : MonoBehaviour
 
 	protected IEnumerator StunCoroutine()
 	{
-		OarController.enabled = false;
+		OarController.IsStunned = true;
 		OnStun?.Invoke();
 
 		yield return new WaitForSeconds(StunDuration);
 
-		OarController.enabled = true;
+		OarController.IsStunned = false;
 	}
 }

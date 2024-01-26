@@ -50,13 +50,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FishType: 0
   PathfindCornerDistance: 0.8
+  BiteDistance: 0.4
   IsLeftToRight: 1
   Model: {fileID: 6782399003708005813}
-  EnableHeight: 1.5
-  DisableHeight: 0.25
+  OutWaterHeight: 1.5
+  InWaterHeight: 0.25
   ExcludeLayerMaskInWater:
     serializedVersion: 2
-    m_Bits: 4608
+    m_Bits: 6912
   ExcludeLayerMaskOutWater:
     serializedVersion: 2
     m_Bits: 0
