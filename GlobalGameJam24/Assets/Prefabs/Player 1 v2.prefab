@@ -96,9 +96,9 @@ MonoBehaviour:
   m_rowOarBackwardKey: 100
   m_oarRotPt: {fileID: 5061951189697182378}
   m_oarRb: {fileID: 1175819503681001928}
-  m_pushPullForce: 4
+  m_pushPullForce: 8
   m_rowOarForce: 0.2
-  m_maxYOffset: 0.35
+  m_maxYOffset: 0.6
 --- !u!1001 &519288999254428745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -107,11 +107,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7492101727478869950}
     m_Modifications:
-    - target: {fileID: 1685959296484234625, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4559187677863538590, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
         type: 3}
       propertyPath: BoatRigidbody
