@@ -8,6 +8,7 @@ public class OarRowingController : MonoBehaviour
 	public float WaterHeight = 0.5f;
 	public float ForceMultiplier = 100f;
 	
+	public bool DoDrawGizmos = false;
 
 	[Header("Boat")]
 	public Rigidbody2D BoatRigidbody;
@@ -80,6 +81,9 @@ public class OarRowingController : MonoBehaviour
 
 	private void OnDrawGizmosSelected()
 	{
+		if (!DoDrawGizmos)
+			return;
+
 		Gizmos.color = IsUnderWater ? Color.blue : Color.green;
 		Gizmos.DrawLine(new Vector3(-10, WaterHeight, 0), new Vector3(10, WaterHeight, 0));
 
