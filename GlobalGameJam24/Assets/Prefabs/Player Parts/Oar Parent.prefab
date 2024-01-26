@@ -97,7 +97,7 @@ GameObject:
   m_Layer: 10
   m_Name: Oar Tip
   m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -130,13 +130,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LerpSpeed: 3
   WaterHeight: 0.5
-  ForceMultiplier: 30
+  ForceMultiplier: 60
   BoatRigidbody: {fileID: 0}
   BoatLeftPointLocalOffset: {x: -0.83, y: -0.36, z: 0}
   BoatRightPointLocalOffset: {x: 0.83, y: -0.36, z: 0}
   PushForceLeft2Right: {x: 1, y: -0.04, z: 0}
   PushForceRight2Left: {x: -1, y: -0.04, z: 0}
-  _underwaterVelocity: 0
+  OnRowEnterWater:
+    m_PersistentCalls:
+      m_Calls: []
+  OnRowExitWater:
+    m_PersistentCalls:
+      m_Calls: []
+  DoDrawGizmos: 0
 --- !u!1 &6952061989471215499
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +187,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6952061989471215499}
   m_Enabled: 1
-  m_Density: 1
+  m_Density: 0.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -229,10 +235,10 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 0.4788298
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 5
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -259,9 +265,9 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0.01}
-  m_ConnectedAnchor: {x: -3.9997177, y: 1.4439961}
+  m_ConnectedAnchor: {x: 0.009150982, y: 0.36094975}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -282,7 +288,7 @@ GameObject:
   m_Layer: 10
   m_Name: Oar Parent
   m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
