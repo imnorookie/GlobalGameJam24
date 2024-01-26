@@ -38,6 +38,7 @@ public class OarController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // TODO: set oarRB.gameObject.GetComponent<HingeJoint2D>().anchor = m_oarRotPt.position; local
         UnityEngine.Vector3 startPos = m_oarRb.transform.localPosition;
         clampValues = new UnityEngine.Vector2(startPos.y - m_maxYOffset, startPos.y + m_maxYOffset);
     }
@@ -56,36 +57,28 @@ public class OarController : MonoBehaviour
         m_oarRb.gameObject.GetComponent<HingeJoint2D>().anchor =
             new UnityEngine.Vector2(pivotPt.x, pivotPt.y);
 
-        float oarYPos = //UnityEngine.Vector3.Distance(m_oarRb.transform.position, m_oarRotPt.position);
-            m_oarRb.transform.localPosition.y;
+        UnityEngine.Vector3 oarLocalPos = m_oarRb.transform.localPosition;
+        float rotation = -m_oarRb.transform.localEulerAngles.z * Mathf.Deg2Rad;
+        float undoneRotY = oarLocalPos.x * Mathf.Sin(rotation) + oarLocalPos.y * Mathf.Cos(rotation); 
 
-        Debug.Log(oarYPos);
         if (Input.GetKey(m_rowOarBackwardKey)) {
             m_oarRb.AddTorque(-m_rowOarForce, ForceMode2D.Impulse);
             return; // can't row and move at the same time.
         }
-        
         
         if (Input.GetKey(m_rowOarForwardKey)) {
             m_oarRb.AddTorque(m_rowOarForce, ForceMode2D.Impulse);
             return; 
         }
 
-        // Debug.Log(oarYPos + " vs " + clampValues.x + " and " + clampValues.y);
-        Debug.Log(m_oarRb.transform.InverseTransformDirection(UnityEngine.Vector3.up));
-        // bool clampPush = oarYPos <= clampValues.x && 
-        // Debug.Log("oarYPos >= clampValues.x: " + (oarYPos >= clampValues.x));
-        if (Input.GetKey(m_pushOarKey) && oarYPos >= clampValues.x) {
+        if (Input.GetKey(m_pushOarKey) && undoneRotY >= clampValues.x) {
             m_oarRb.gameObject.GetComponent<HingeJoint2D>().enabled = false;
             m_oarRb.AddRelativeForce(UnityEngine.Vector3.up * -m_pushPullForce);
         }
 
-        // Debug.Log("oarYPos <= clampValues.y: " + (oarYPos <= clampValues.y));
-        if (Input.GetKey(m_pullOarKey) && oarYPos <= clampValues.y) {
+        if (Input.GetKey(m_pullOarKey) && undoneRotY <= clampValues.y) {
             m_oarRb.gameObject.GetComponent<HingeJoint2D>().enabled = false;
             m_oarRb.AddRelativeForce(UnityEngine.Vector3.up * m_pushPullForce);
         }
-
-
     }
 }
