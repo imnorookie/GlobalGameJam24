@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FishController : MonoBehaviour
 {
-	const float WATER_BOTTOM = -5f;
+	const float WATER_BOTTOM = -10f;
 
 	public FishTypeEnum FishType;
 	public float PathfindCornerDistance = .6f;
