@@ -136,20 +136,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish
       objectReference: {fileID: 0}
-    - target: {fileID: 2013457544538347048, guid: d918cfe29fd921940a60742b0aebbb1a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 3442231910311820350, guid: d918cfe29fd921940a60742b0aebbb1a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.12
+      value: -2.05
       objectReference: {fileID: 0}
     - target: {fileID: 3442231910311820350, guid: d918cfe29fd921940a60742b0aebbb1a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.38
+      value: 2.26
       objectReference: {fileID: 0}
     - target: {fileID: 3442231910311820350, guid: d918cfe29fd921940a60742b0aebbb1a,
         type: 3}
@@ -191,79 +186,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3760692451497977732, guid: d918cfe29fd921940a60742b0aebbb1a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4410637839379857434, guid: d918cfe29fd921940a60742b0aebbb1a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5850316493859677401, guid: d918cfe29fd921940a60742b0aebbb1a,
-        type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d918cfe29fd921940a60742b0aebbb1a, type: 3}
---- !u!1 &2079389007
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2079389008}
-  - component: {fileID: 2079389009}
-  m_Layer: 0
-  m_Name: Fish Spawn Pool
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2079389008
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079389007}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1017642705692762990}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2079389009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079389007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5416fafa7e1346f4284ff858300b253a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FishRegularPrefabs: {fileID: 6530957429637921476, guid: d918cfe29fd921940a60742b0aebbb1a,
-    type: 3}
-  SpawnInitialDelay: 0
-  SpawnInterval: 3
-  SpawnIntervalRandomRange: 0.5
-  SpawnPositionLeft: {x: -6.2, y: -4.5, z: 0}
-  SpawnPositionRight: {x: 6.2, y: -4.5, z: 0}
-  SurfacePositionLeft: {x: -6.2, y: 0, z: 0}
-  SurfacePositionRight: {x: 6.2, y: 0, z: 0}
 --- !u!1001 &16730551498758344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -397,19 +324,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 220226110313509820, guid: 9d42dfd2585c5b44c8a565fc64fab3a2,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2079389008}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d42dfd2585c5b44c8a565fc64fab3a2, type: 3}
---- !u!4 &1017642705692762990 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 220226110313509820, guid: 9d42dfd2585c5b44c8a565fc64fab3a2,
-    type: 3}
-  m_PrefabInstance: {fileID: 1017642705692762989}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1433683972318813916
 PrefabInstance:
   m_ObjectHideFlags: 0
