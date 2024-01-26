@@ -167,11 +167,11 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 0.5010724
       objectReference: {fileID: 0}
-    - target: {fileID: 6509874458698973670, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
+    - target: {fileID: 6219835626884557121, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
         type: 3}
-      propertyPath: m_Distance
-      value: 0.01
-      objectReference: {fileID: 0}
+      propertyPath: OarController
+      value: 
+      objectReference: {fileID: 7563356951247603629}
     - target: {fileID: 6509874458698973670, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
         type: 3}
       propertyPath: m_ConnectedRigidBody
