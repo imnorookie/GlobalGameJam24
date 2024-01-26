@@ -97,7 +97,7 @@ MonoBehaviour:
   m_oarRotPt: {fileID: 5061951189697182378}
   m_oarRb: {fileID: 1175819503681001928}
   m_pushPullForce: 4
-  m_rowOarForce: 1
+  m_rowOarForce: 0.2
   m_maxYOffset: 0.35
 --- !u!1001 &519288999254428745
 PrefabInstance:
@@ -107,6 +107,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7492101727478869950}
     m_Modifications:
+    - target: {fileID: 1685959296484234625, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4559187677863538590, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
         type: 3}
       propertyPath: BoatRigidbody
@@ -326,6 +331,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999968956197611790, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
+        type: 3}
+      propertyPath: m_Density
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516483400197799684, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.5010724
       objectReference: {fileID: 0}
     - target: {fileID: 6509874458698973670, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
         type: 3}
