@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class OarController : MonoBehaviour
 {
+    [Tooltip("set by player head controller when hit by fish")]
+    public bool IsStunned = false;
+
 
     [SerializeField]
     private KeyCode m_pullOarKey;
@@ -60,6 +63,9 @@ public class OarController : MonoBehaviour
         UnityEngine.Vector3 oarLocalPos = m_oarRb.transform.localPosition;
         float rotation = -m_oarRb.transform.localEulerAngles.z * Mathf.Deg2Rad;
         float undoneRotY = oarLocalPos.x * Mathf.Sin(rotation) + oarLocalPos.y * Mathf.Cos(rotation); 
+
+        if (IsStunned)
+        	return;
 
         if (Input.GetKey(m_rowOarBackwardKey)) {
             m_oarRb.AddTorque(-m_rowOarForce, ForceMode2D.Impulse);
