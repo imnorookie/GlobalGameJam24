@@ -19,9 +19,6 @@ public class OarController : MonoBehaviour
     private KeyCode m_rowOarBackwardKey;
 
     [SerializeField]
-    private Transform m_oarRotPt;
-
-    [SerializeField]
     private Rigidbody2D m_oarRb;
     
     [SerializeField]
