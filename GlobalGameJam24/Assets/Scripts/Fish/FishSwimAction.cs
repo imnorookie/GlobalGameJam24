@@ -5,7 +5,7 @@ using UnityEngine;
 public class FishSwimAction : MonoBehaviour
 {
 	const float DIRECTION_LERP_SPEED = 2f;
-	const float SPEED_LERP_SPEED = 15f; // eg. 5 = 5m/s per second
+	const float SPEED_LERP_SPEED = 3f; // eg. 5 = 5m/s per second
 
 	public float Speed = 1f;
 	//public float VerticalSpeed = 1f; // when rising or falling (maybe later)
