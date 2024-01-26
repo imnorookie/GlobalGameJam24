@@ -191,59 +191,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d918cfe29fd921940a60742b0aebbb1a, type: 3}
---- !u!4 &187728910 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2739641577497745920, guid: 94e9744baa86a7349839c77d7805f4f8,
-    type: 3}
-  m_PrefabInstance: {fileID: 16730551498758344}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1248323088
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1248323089}
-  - component: {fileID: 1248323090}
-  m_Layer: 10
-  m_Name: Oar Tip
-  m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1248323089
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248323088}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -1.94, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 187728910}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1248323090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248323088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e0c20b006ad44f4182ea0a3342db792, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LerpSpeed: 3
-  WaterHeight: 0.5
-  _underwaterVelocity: 0
 --- !u!1001 &16730551498758344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -252,6 +199,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 481995878947506269, guid: 94e9744baa86a7349839c77d7805f4f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 24.242
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209741404819677882, guid: 94e9744baa86a7349839c77d7805f4f8,
+        type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2314576028039100145, guid: 94e9744baa86a7349839c77d7805f4f8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -309,11 +266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2739641577497745920, guid: 94e9744baa86a7349839c77d7805f4f8,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1248323089}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94e9744baa86a7349839c77d7805f4f8, type: 3}
 --- !u!1001 &1017642705692762989
@@ -700,6 +653,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699027929821248749, guid: 0da37846b61ba3042a940a9d95952241,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 4.0002823
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
