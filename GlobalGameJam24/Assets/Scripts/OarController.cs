@@ -68,8 +68,6 @@ public class OarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsStunned)
-        	return;
 
         _inputX = 0;
         _inputY = 0;
@@ -88,6 +86,10 @@ public class OarController : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+
+		if (IsStunned)
+			return;
+
 		// resolve movement
 		if (_inputX != 0)
 			MoveX();
@@ -100,7 +102,7 @@ public class OarController : MonoBehaviour
 	/// Stuns the character, disables input and movement for a short time
 	/// </summary>
 	/// <param name="stunDuration"></param>
-	public void Stun(float stunDuration)
+	public void Stun()
 	{
 		if (_stunCoroutine != null)
 			StopCoroutine(_stunCoroutine);
@@ -124,7 +126,11 @@ public class OarController : MonoBehaviour
 	/// </summary>
 	protected void MoveY()
     {
-        _oarPosition += _inputY * m_pushPullForce * Time.fixedDeltaTime; 
+		// changed how push pull work. 
+		// move this _oarPosition 1D float up or down first
+		// then calculate the 3D movement from this _oarPosition
+		// TODO: when adding acceleration, change how fast _oarPosition changes. 
+		_oarPosition += _inputY * m_pushPullForce * Time.fixedDeltaTime; 
         _oarPosition = Mathf.Clamp(_oarPosition, -m_maxYOffset, m_maxYOffset);
         float oarPositionDelta = _oarPosition - _oarPositionLast;
 
@@ -147,7 +153,6 @@ public class OarController : MonoBehaviour
 	protected IEnumerator StunCoroutine()
 	{
 		IsStunned = true;
-		OnStun?.Invoke();
 
 		yield return new WaitForSeconds(StunDuration);
 
