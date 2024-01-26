@@ -37,6 +37,7 @@ public class FishController : MonoBehaviour
 		if (_pathPoints.Count == 0)
 			Initialize(IsLeftToRight);
 	}
+
 	private void FixedUpdate()
 	{
 		// TODO: check if fish is in water
@@ -48,6 +49,10 @@ public class FishController : MonoBehaviour
 
 	public void Initialize(bool isLeftToRight)
 	{
+		_pathPoints.Clear();
+		_currentPathIndex = 0;
+		_distanceToNextPoint = 0f;
+
 		if (isLeftToRight)
 		{
 			_pathPoints.Add(FishManager.Instance.SurfacePositionLeft);
