@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 2720176104332844127}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.863, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.5519, y: 0.5519, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -180,7 +180,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5821755044211660688}
   - component: {fileID: 2706003741528053488}
+  - component: {fileID: 5938147269972013444}
   - component: {fileID: 6219835626884557121}
+  - component: {fileID: 4283352276282058042}
   m_Layer: 8
   m_Name: Head Hitbox
   m_TagString: Untagged
@@ -197,7 +199,7 @@ Transform:
   m_GameObject: {fileID: 3730858258541944037}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -236,9 +238,24 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.82582366}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2914158
+  m_Radius: 0.41848463
+--- !u!114 &5938147269972013444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730858258541944037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31af60b891893ae4bb253bc1dcf57282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Note: "Player head controller detects collision with fish and enemy oar.\n\nAbout
+    Minimum Oar Speed:\nFrom my testing full swing is about .37, full poke with current
+    setting is .15-.16. \nTurn on 'Do Print Oar Speed' to test different values."
 --- !u!114 &6219835626884557121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +269,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OarController: {fileID: 0}
+  MinimumOarSpeed: 0.12
+  DoPrintOarSpeed: 0
+--- !u!61 &4283352276282058042
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730858258541944037}
+  m_Enabled: 1
+  m_Density: 0.5
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5851576, y: 0.46256095}
+  m_EdgeRadius: 0
 --- !u!1 &9120940444707213614
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +364,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.23427837
+  m_Mass: 0.2524747
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: -0.6
@@ -323,7 +387,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9120940444707213614}
   m_Enabled: 1
-  m_Density: 0.1
+  m_Density: 0.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

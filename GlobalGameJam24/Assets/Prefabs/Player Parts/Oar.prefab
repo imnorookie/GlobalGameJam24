@@ -155,9 +155,10 @@ GameObject:
   - component: {fileID: 1590482522020504830}
   - component: {fileID: 2956123175098223059}
   - component: {fileID: 3127362092045758562}
+  - component: {fileID: 8904301638402486543}
   m_Layer: 10
   m_Name: Oar
-  m_TagString: Untagged
+  m_TagString: Oar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -276,3 +277,16 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &8904301638402486543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6999034975665363032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac58fba70bda6e1459b4142eda01fe5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OarRowingController: {fileID: 4559187677863538590}

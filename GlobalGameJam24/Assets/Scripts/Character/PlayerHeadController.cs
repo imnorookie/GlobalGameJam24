@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,9 +6,10 @@ using UnityEngine.Events;
 
 public class PlayerHeadController : MonoBehaviour
 {
-	[Header("Stun")]
 	public OarController OarController;
-
+	[Tooltip("Minimum oar moving speed to stun the player.")]
+	public float MinimumOarSpeed = 12f;
+	public bool DoPrintOarSpeed = false;
 	// TODO: stun animation and such
 
 
@@ -17,6 +19,11 @@ public class PlayerHeadController : MonoBehaviour
 		{
 			CollisionWithFish(collision);
 		}
+		else if (collision.gameObject.CompareTag("Oar"))
+		{
+			CollisionWithOar(collision);
+		}
+
 	}
 
 	private void CollisionWithFish(Collider2D collision)
@@ -27,4 +34,20 @@ public class PlayerHeadController : MonoBehaviour
 
 		OarController.Stun();
 	}
+
+	private void CollisionWithOar(Collider2D collision)
+	{
+		var oar = collision.gameObject.GetComponent<Oar>();
+		if (oar == null)
+			return;
+
+		var oarSpeed = oar.OarSpeed;
+		bool isStunned = oarSpeed > MinimumOarSpeed;
+
+		if (DoPrintOarSpeed)
+			Debug.Log($"{(isStunned ? "" : "NOT ")} BONKED WITH SPEED: {oarSpeed.ToString("F2")} / {MinimumOarSpeed}");
+        
+		if (isStunned)
+			OarController.Stun();
+    }
 }
