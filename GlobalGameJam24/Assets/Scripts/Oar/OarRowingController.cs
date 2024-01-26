@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class OarRowingController : MonoBehaviour
 {
-
 	public float LerpSpeed = 0.25f;
 	public float WaterHeight = 0.5f;
+	[Header("Boat")]
+	public Rigidbody2D BoatRigidbody;
+	public Vector3 BoatLeftPoint;
+	public Vector3 BoatRightPoint;
 
 	[SerializeField]
 	protected float _underwaterVelocity;
 	protected Vector3 _lastPosition;
 	
 	public bool IsUnderWater => transform.position.y < WaterHeight;
+
+
+	private void Update()
+	{
+		
+	}
+
+
+
 
 	private void FixedUpdate()
 	{
