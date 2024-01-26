@@ -107,6 +107,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2314576028039100145}
     m_Modifications:
+    - target: {fileID: 4559187677863538590, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
+        type: 3}
+      propertyPath: BoatRigidbody
+      value: 
+      objectReference: {fileID: 1209741404819677882}
     - target: {fileID: 4686922705718490851, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -361,6 +366,12 @@ PrefabInstance:
 --- !u!4 &481995878947506269 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5637841044840484547, guid: fc83139afa482bf43a1a2db95cf83cb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 5228052711803176606}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1209741404819677882 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 6360238638563861540, guid: fc83139afa482bf43a1a2db95cf83cb5,
     type: 3}
   m_PrefabInstance: {fileID: 5228052711803176606}
   m_PrefabAsset: {fileID: 0}
