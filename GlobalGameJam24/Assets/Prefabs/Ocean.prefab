@@ -133,7 +133,7 @@ BuoyancyEffector2D:
     serializedVersion: 2
     m_Bits: 4608
   m_SurfaceLevel: 0
-  m_Density: 2
+  m_Density: 20
   m_LinearDrag: 5
   m_AngularDrag: 5
   m_FlowAngle: 0
@@ -182,7 +182,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14, y: 6}
+  m_Size: {x: 13.007732, y: 6}
   m_EdgeRadius: 0
 --- !u!1 &5677891891472271505
 GameObject:
