@@ -47,10 +47,10 @@ public class OarController : MonoBehaviour
     void Update()
     {
         // snappy (like below) or weight-y (remove below line)?
-        m_oarRb.velocity = UnityEngine.Vector3.zero; 
+        // m_oarRb.velocity = UnityEngine.Vector3.zero; 
         m_oarRb.gameObject.GetComponent<HingeJoint2D>().enabled = true;
         m_oarRb.angularVelocity = 0.0f;
-        
+            
         UnityEngine.Vector3 pivotPt = m_oarRb.transform.InverseTransformPoint(m_oarRotPt.position);
 
         // updating the anchor pos here to be congruent to the pivot.
@@ -70,6 +70,7 @@ public class OarController : MonoBehaviour
             m_oarRb.AddTorque(m_rowOarForce, ForceMode2D.Impulse);
             return; 
         }
+
 
         if (Input.GetKey(m_pushOarKey) && undoneRotY >= clampValues.x) {
             m_oarRb.gameObject.GetComponent<HingeJoint2D>().enabled = false;
