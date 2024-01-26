@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 7402678944251986179}
   - component: {fileID: 5080378641212546671}
   - component: {fileID: 1685959296484234625}
+  - component: {fileID: 8129652753331608958}
   m_Layer: 10
   m_Name: Oar
   m_TagString: Untagged
@@ -190,6 +191,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!233 &8129652753331608958
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6952061989471215499}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0.01}
+  m_ConnectedAnchor: {x: -4, y: 1.444}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
 --- !u!1 &6999034975665363032
 GameObject:
   m_ObjectHideFlags: 0
