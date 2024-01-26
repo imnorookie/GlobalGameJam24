@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class OarController : MonoBehaviour
 {
-    [Tooltip("set by player head controller when hit by fish")]
-    public bool IsStunned = false;
-
-
-    [SerializeField]
+	[Header("Oar Controls")]
+	[SerializeField]
     private KeyCode m_pullOarKey;
 
     [SerializeField]
@@ -35,7 +33,15 @@ public class OarController : MonoBehaviour
     [SerializeField]
     private float m_maxYOffset;
 
-    private UnityEngine.Vector2 clampValues;
+
+	[Header("Stun")]
+	public bool IsStunned = false;
+	[Tooltip("How long the Oar Controller is disbaled from stun")]
+	public float StunDuration = 1.5f;
+	public UnityEvent OnStun;
+
+
+	private UnityEngine.Vector2 clampValues;
 
     protected HingeJoint2D _oarHingeJoint;
 
@@ -45,9 +51,11 @@ public class OarController : MonoBehaviour
     protected float _oarPosition; // height of the oar (sort of the y-axis)
     protected float _oarPositionLast; // from last frame
 
+	protected Coroutine _stunCoroutine;
 
-    // Start is called before the first frame update
-    void Start()
+
+	// Start is called before the first frame update
+	void Start()
 	{
 		_oarHingeJoint = m_oarRb.gameObject.GetComponent<HingeJoint2D>();
 
@@ -89,17 +97,32 @@ public class OarController : MonoBehaviour
 	}
 
 	/// <summary>
+	/// Stuns the character, disables input and movement for a short time
+	/// </summary>
+	/// <param name="stunDuration"></param>
+	public void Stun(float stunDuration)
+	{
+		if (_stunCoroutine != null)
+			StopCoroutine(_stunCoroutine);
+
+		_stunCoroutine = StartCoroutine(StunCoroutine());
+
+		OnStun?.Invoke();
+	}
+
+
+	/// <summary>
 	/// Rotates the oar with _inputX
 	/// </summary>
-	public void MoveX()
+	protected void MoveX()
 	{
 		m_oarRb.AddTorque(m_rowOarForce * _inputX, ForceMode2D.Impulse);
 	}
 
-    /// <summary>
-    /// Push and pulls the oar with _inputY
-    /// </summary>
-    public void MoveY()
+	/// <summary>
+	/// Push and pulls the oar with _inputY
+	/// </summary>
+	protected void MoveY()
     {
         _oarPosition += _inputY * m_pushPullForce * Time.fixedDeltaTime; 
         _oarPosition = Mathf.Clamp(_oarPosition, -m_maxYOffset, m_maxYOffset);
@@ -121,6 +144,18 @@ public class OarController : MonoBehaviour
 	}
 
 
+	protected IEnumerator StunCoroutine()
+	{
+		IsStunned = true;
+		OnStun?.Invoke();
+
+		yield return new WaitForSeconds(StunDuration);
+
+		IsStunned = false;
+	}
+
+
+	#region Unity Editor
 	private void OnDrawGizmos()
 	{
 		Gizmos.color = new Color(1, 0, 0, .3f);
@@ -129,4 +164,5 @@ public class OarController : MonoBehaviour
 			Gizmos.DrawSphere(m_oarRb.worldCenterOfMass, 0.1f);
 		}
 	}
+    #endregion
 }
