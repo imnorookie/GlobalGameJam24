@@ -10,7 +10,7 @@ public class FishManager : MonoBehaviour
     public static FishManager Instance;
 
     [Header("Fish Prefabs")]
-    public FishController FishRegularPrefabs;
+	public FishController[] FishRegularPrefabs;
 
     [Header("Fish Spawn Settings")]
     public float SpawnInitialDelay;
@@ -40,7 +40,10 @@ public class FishManager : MonoBehaviour
 
 		for (int i = 0; i < 16; i++)
         {
-			var fish = Instantiate(FishRegularPrefabs);
+			// choose a random fish prefab
+			var fishPrefab = FishRegularPrefabs[Random.Range(0, FishRegularPrefabs.Length)];
+
+			var fish = Instantiate(fishPrefab);
 			fish.gameObject.SetActive(false);
 			_fishesRegular.Add(fish);
 		}

@@ -78,8 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5416fafa7e1346f4284ff858300b253a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FishRegularPrefabs: {fileID: 6530957429637921476, guid: d918cfe29fd921940a60742b0aebbb1a,
-    type: 3}
+  FishRegularPrefabs:
+  - {fileID: 1686639410483980556, guid: 7147787ed2aeb084395928d29f6b4b4c, type: 3}
+  - {fileID: 1686639410483980556, guid: 2ddbd4cab33cffb42ac2e192fe2989ab, type: 3}
   SpawnInitialDelay: 0
   SpawnInterval: 3
   SpawnIntervalRandomRange: 0.5
