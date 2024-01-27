@@ -107,8 +107,6 @@ public class FishController : MonoBehaviour
 
 		ChangeInWaterCollisionMode(true);
 		SetReset(true);
-
-		Debug.Log("BiteCoroutine ended");
 	}
 
 	public void SetReset(bool state)
