@@ -22,6 +22,8 @@ public class PlayerHeadController : MonoBehaviour
 		else if (collision.gameObject.CompareTag("Oar"))
 		{
 			CollisionWithOar(collision);
+		} else if (collision.gameObject.CompareTag("LosingZone")) {
+			CollisionWithLosingZone();
 		}
 
 	}
@@ -50,4 +52,11 @@ public class PlayerHeadController : MonoBehaviour
 		if (isStunned)
 			OarController.Stun();
     }
+
+	private void CollisionWithLosingZone() {
+		if (this.CompareTag("P1Head"))
+			FindObjectOfType<GameManager>().RoundEnd(0);
+		else
+			FindObjectOfType<GameManager>().RoundEnd(1);
+	}
 }
