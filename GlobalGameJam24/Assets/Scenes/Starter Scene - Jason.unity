@@ -201,10 +201,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6387567889312860386, guid: 94e9744baa86a7349839c77d7805f4f8,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.84414756
+      objectReference: {fileID: 0}
     - target: {fileID: 6977560093108729577, guid: 94e9744baa86a7349839c77d7805f4f8,
         type: 3}
       propertyPath: m_Name
       value: Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 7472023838840530383, guid: 94e9744baa86a7349839c77d7805f4f8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8491619748997813682, guid: 94e9744baa86a7349839c77d7805f4f8,
         type: 3}
@@ -551,6 +561,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 6295647487951743571, guid: 5bacdfde178f66344a2f75414d13f50c,
+        type: 3}
+      propertyPath: orthographic size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6763368163820713485, guid: 5bacdfde178f66344a2f75414d13f50c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -559,7 +574,7 @@ PrefabInstance:
     - target: {fileID: 6763368163820713485, guid: 5bacdfde178f66344a2f75414d13f50c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6763368163820713485, guid: 5bacdfde178f66344a2f75414d13f50c,
         type: 3}
@@ -651,6 +666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 0.3696139
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764566651117105778, guid: 0da37846b61ba3042a940a9d95952241,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.84414756
       objectReference: {fileID: 0}
     - target: {fileID: 4053179584547365548, guid: 0da37846b61ba3042a940a9d95952241,
         type: 3}
