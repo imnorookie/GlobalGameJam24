@@ -131,10 +131,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1388251776954254327, guid: 94e9744baa86a7349839c77d7805f4f8,
+    - target: {fileID: 1172721796718250772, guid: 94e9744baa86a7349839c77d7805f4f8,
         type: 3}
-      propertyPath: DoPrintOarSpeed
-      value: 1
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[10].x
+      value: 1.2309625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172721796718250772, guid: 94e9744baa86a7349839c77d7805f4f8,
+        type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[10].y
+      value: 0.22778684
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209741404819677882, guid: 94e9744baa86a7349839c77d7805f4f8,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.1705995
       objectReference: {fileID: 0}
     - target: {fileID: 2314576028039100145, guid: 94e9744baa86a7349839c77d7805f4f8,
         type: 3}
@@ -191,10 +201,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6977560093108729577, guid: 94e9744baa86a7349839c77d7805f4f8,
+        type: 3}
+      propertyPath: m_Name
+      value: Model
+      objectReference: {fileID: 0}
     - target: {fileID: 8491619748997813682, guid: 94e9744baa86a7349839c77d7805f4f8,
         type: 3}
       propertyPath: m_Mass
-      value: 0.2524747
+      value: 0.3696139
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -635,7 +650,7 @@ PrefabInstance:
     - target: {fileID: 1820322179309793058, guid: 0da37846b61ba3042a940a9d95952241,
         type: 3}
       propertyPath: m_Mass
-      value: 0.2524747
+      value: 0.3696139
       objectReference: {fileID: 0}
     - target: {fileID: 4053179584547365548, guid: 0da37846b61ba3042a940a9d95952241,
         type: 3}
@@ -691,6 +706,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8958366844673677354, guid: 0da37846b61ba3042a940a9d95952241,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.3904653
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
