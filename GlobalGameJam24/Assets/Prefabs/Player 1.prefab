@@ -95,7 +95,7 @@ MonoBehaviour:
   m_rowOarBackwardKey: 100
   m_oarRb: {fileID: 6387567889312860386}
   m_pushPullForce: 8
-  m_rowOarForce: 0.2
+  m_rowOarForce: 0.25
   m_maxYOffset: 0.6
   IsStunned: 0
   StunDuration: 1.5
