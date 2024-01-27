@@ -95,7 +95,7 @@ MonoBehaviour:
   m_rowOarBackwardKey: 100
   m_oarRb: {fileID: 6387567889312860386}
   m_pushPullForce: 8
-  m_rowOarForce: 0.2
+  m_rowOarForce: 0.25
   m_maxYOffset: 0.6
   IsStunned: 0
   StunDuration: 1.5
@@ -167,6 +167,11 @@ PrefabInstance:
       objectReference: {fileID: 7563356951247603629}
     - target: {fileID: 6509874458698973670, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
         type: 3}
+      propertyPath: m_DampingRatio
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509874458698973670, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
+        type: 3}
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 1209741404819677882}
@@ -183,6 +188,12 @@ PrefabInstance:
 --- !u!4 &6392861230417917569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2138441563754273847, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
+    type: 3}
+  m_PrefabInstance: {fileID: 4977959930270853814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &8491619748997813682 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 3516483400197799684, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
     type: 3}
   m_PrefabInstance: {fileID: 4977959930270853814}
   m_PrefabAsset: {fileID: 0}
@@ -313,7 +324,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedRigidBody
       value: 
-      objectReference: {fileID: 1209741404819677882}
+      objectReference: {fileID: 8491619748997813682}
     - target: {fileID: 4559187677863538590, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
         type: 3}
       propertyPath: BoatRigidbody
