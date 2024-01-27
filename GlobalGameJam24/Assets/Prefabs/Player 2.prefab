@@ -108,6 +108,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 1209741404819677882, guid: 94e9744baa86a7349839c77d7805f4f8,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1.3904653
+      objectReference: {fileID: 0}
     - target: {fileID: 1286304295859625658, guid: 94e9744baa86a7349839c77d7805f4f8,
         type: 3}
       propertyPath: m_Layer
@@ -250,6 +255,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 7209258695520461194, guid: 94e9744baa86a7349839c77d7805f4f8,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -509496472, guid: e75105d75c278e24aafe75beaecb7d78,
+        type: 3}
     - target: {fileID: 7405829248459281584, guid: 94e9744baa86a7349839c77d7805f4f8,
         type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
