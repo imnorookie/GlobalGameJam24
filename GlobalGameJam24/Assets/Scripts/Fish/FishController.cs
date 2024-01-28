@@ -172,6 +172,7 @@ public class FishController : MonoBehaviour
 
 	public void ChangeInWaterCollisionMode(bool isInWater)
 	{
+		VFXManager._instance.PlayWaterSplashVFXAtPos(transform);
 		_rigidbody.excludeLayers = isInWater ? ExcludeLayerMaskInWater : ExcludeLayerMaskOutWater;
 		_isInWaterCollisionMode = isInWater;
 	}

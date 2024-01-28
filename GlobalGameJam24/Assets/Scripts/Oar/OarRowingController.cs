@@ -59,10 +59,12 @@ public class OarRowingController : MonoBehaviour
 		
 		if (IsUnderWater && !_wasUnderWaterLastFrame && shouldSplash) {
 			SoundManager._instance.PlayOarEnterWaterSFX();
+			VFXManager._instance.PlayWaterSplashVFXAtPos(transform);
 			OnRowEnterWater?.Invoke();
 		}
 		else if (!IsUnderWater && _wasUnderWaterLastFrame && shouldSplash) {
 			SoundManager._instance.PlayOarExitWaterSFX();
+			VFXManager._instance.PlayWaterSplashVFXAtPos(transform);
 			OnRowExitWater?.Invoke();
 		}
 	}

@@ -57,6 +57,7 @@ public class PlayerHeadController : MonoBehaviour
     }
 
 	private void CollisionWithLosingZone() {
+		VFXManager._instance.PlayWaterSplashVFXAtPos(transform);
 		if (this.CompareTag("P1Head"))
 			FindObjectOfType<GameManager>().RoundEnd(0);
 		else
