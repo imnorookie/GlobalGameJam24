@@ -13,6 +13,9 @@ TagManager:
   - Player2
   - Boat
   - Water
+  - MainMenu
+  - MMStartGame
+  - MMCredits
   layers:
   - Default
   - TransparentFX

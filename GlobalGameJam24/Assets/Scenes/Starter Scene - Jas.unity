@@ -324,11 +324,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3564578039821272036, guid: 8b5b3b9140839d648beb573e73d68005,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3594587174426864675, guid: 8b5b3b9140839d648beb573e73d68005,
         type: 3}
       propertyPath: m_Pivot.x
@@ -429,26 +424,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4809264803247365851, guid: 8b5b3b9140839d648beb573e73d68005,
-        type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4809264803247365851, guid: 8b5b3b9140839d648beb573e73d68005,
-        type: 3}
-      propertyPath: m_ScreenMatchMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4809264803247365851, guid: 8b5b3b9140839d648beb573e73d68005,
-        type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 4809264803247365851, guid: 8b5b3b9140839d648beb573e73d68005,
-        type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
-      objectReference: {fileID: 0}
     - target: {fileID: 6077773785828713872, guid: 8b5b3b9140839d648beb573e73d68005,
         type: 3}
       propertyPath: m_Name
@@ -534,11 +509,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Game Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 7868270337311813314, guid: b55fb970fe4ffc84799fc48e156bc17d,
-        type: 3}
-      propertyPath: m_stunFreezeFrames
-      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8757979884930775621, guid: b55fb970fe4ffc84799fc48e156bc17d,
         type: 3}
