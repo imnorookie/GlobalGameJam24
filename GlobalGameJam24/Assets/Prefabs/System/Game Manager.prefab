@@ -249,7 +249,7 @@ MonoBehaviour:
   m_waterSplashPrefab: {fileID: 6159303782291571874, guid: 13d77e10534f18840947dc482ee93745,
     type: 3}
   m_waterSplashTime: 0.5
-  m_stunFreezeFrames: 1
+  m_stunFreezeFrames: 10
   zoomLvl: 1
   zoomTime: 0.25
 --- !u!114 &7236389543566749798
