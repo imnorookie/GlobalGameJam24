@@ -1623,12 +1623,6 @@ PrefabInstance:
       objectReference: {fileID: 1433683972318813919}
     - target: {fileID: 3072521552678885174, guid: b55fb970fe4ffc84799fc48e156bc17d,
         type: 3}
-      propertyPath: m_AIPrefab
-      value: 
-      objectReference: {fileID: 5822481786426599717, guid: 127528b553862e541aa06bd12649c6a7,
-        type: 3}
-    - target: {fileID: 3072521552678885174, guid: b55fb970fe4ffc84799fc48e156bc17d,
-        type: 3}
       propertyPath: m_mainMenu
       value: 
       objectReference: {fileID: 2069006258}

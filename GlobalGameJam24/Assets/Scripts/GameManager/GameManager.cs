@@ -356,6 +356,8 @@ public class GameManager : MonoBehaviour
                 ScoreCounterText[1].text = pRdsWon?[1].ToString();
 				break;
             case GameStates.GameOver:
+
+                Debug.Log("Game Over: Score: " + pRdsWon?[0] + " - " + pRdsWon?[1])
                 handleGameOverInput();
                 break;
         }
