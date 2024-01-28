@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class GameManager : MonoBehaviour
     private Vector3 m_p2StartPos;
 
     public int[] pRdsWon = new int[2];
+
+    public GameObject ScoreUI;
+    public TextMeshProUGUI[] ScoreCounterText;
+
+
     private GameObject[] players = new GameObject[2];
 
     private bool playBGM = false;
@@ -139,7 +145,10 @@ public class GameManager : MonoBehaviour
 
     private void startRound() {
         gameState = GameStates.Playing;
-        BGM.Play();
+
+		ScoreUI.SetActive(true);
+
+		BGM.Play();
         spawnPlayers();
     }
 
@@ -335,7 +344,9 @@ public class GameManager : MonoBehaviour
                 handleControlScreen();
                 break;
             case GameStates.Playing:
-                break;
+                ScoreCounterText[0].text = pRdsWon[0].ToString();
+                ScoreCounterText[1].text = pRdsWon[1].ToString();
+				break;
             case GameStates.GameOver:
                 handleGameOverInput();
                 break;
