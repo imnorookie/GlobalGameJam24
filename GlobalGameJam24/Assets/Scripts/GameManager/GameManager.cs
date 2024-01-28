@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviour
 {
 
     [SerializeField]
+    private GameObject m_AIPrefab;
+
+    private bool ai;
+
+    [SerializeField]
     private int m_rdsToWin = 2;
 
     [SerializeField]
@@ -140,12 +145,12 @@ public class GameManager : MonoBehaviour
 
     private void spawnPlayers() {
         players[0] = Instantiate(m_p1Prefab, m_p1StartPos, new Quaternion());
-        players[1] = Instantiate(m_p2Prefab, m_p2StartPos, new Quaternion());
+        players[1] = Instantiate(ai ? m_AIPrefab : m_p2Prefab, m_p2StartPos, new Quaternion());
     }
 
     private void startRound() {
         gameState = GameStates.Playing;
-
+        pRdsWon = new int[2];
 		ScoreUI.SetActive(true);
 
 		BGM.Play();
@@ -294,6 +299,7 @@ public class GameManager : MonoBehaviour
             gameState = GameStates.ControlScreen;
             m_playerSelectMenu.SetActive(false);
             SoundManager._instance.PlayOarCollisionSFX();
+            ai = true;
             startInstructions();
             // startRound();
             return;
@@ -303,9 +309,10 @@ public class GameManager : MonoBehaviour
             gameState = GameStates.ControlScreen;
             m_playerSelectMenu.SetActive(false);
             SoundManager._instance.PlayOarCollisionSFX();
-			startInstructions();
-			// startRound();
-			return;
+            ai = false;
+            startInstructions();
+            // startRound();
+            return;
         }
 
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A)) {
@@ -345,8 +352,8 @@ public class GameManager : MonoBehaviour
                 handleControlScreen();
                 break;
             case GameStates.Playing:
-                ScoreCounterText[0].text = pRdsWon[0].ToString();
-                ScoreCounterText[1].text = pRdsWon[1].ToString();
+                ScoreCounterText[0].text = pRdsWon?[0].ToString();
+                ScoreCounterText[1].text = pRdsWon?[1].ToString();
 				break;
             case GameStates.GameOver:
                 handleGameOverInput();
