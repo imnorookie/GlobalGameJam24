@@ -11,6 +11,8 @@ TagManager:
   - P2Head
   - Player1
   - Player2
+  - Boat
+  - Water
   layers:
   - Default
   - TransparentFX

@@ -34,6 +34,7 @@ public class PlayerHeadController : MonoBehaviour
 
 		fishController?.Bite(transform, OarController.StunDuration);
 
+		SoundManager._instance.PlayFishOnPlayerCollisionSFX();
 		OarController.Stun();
 	}
 
@@ -49,8 +50,10 @@ public class PlayerHeadController : MonoBehaviour
 		if (DoPrintOarSpeed)
 			Debug.Log($"{(isStunned ? "" : "NOT ")} BONKED WITH SPEED: {oarSpeed.ToString("F2")} / {MinimumOarSpeed}");
         
-		if (isStunned)
+		if (isStunned) {
 			OarController.Stun();
+			SoundManager._instance.PlayOarOnPlayerCollisionSFX();
+		}
     }
 
 	private void CollisionWithLosingZone() {

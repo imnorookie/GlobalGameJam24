@@ -154,9 +154,10 @@ GameObject:
   - component: {fileID: 5637841044840484547}
   - component: {fileID: 6360238638563861540}
   - component: {fileID: 6398381964775394698}
+  - component: {fileID: 5357410382065900248}
   m_Layer: 9
   m_Name: Boat
-  m_TagString: Untagged
+  m_TagString: Boat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,3 +259,15 @@ PolygonCollider2D:
       - {x: 0.99338734, y: -0.49774104}
       - {x: 1.1994483, y: 0.0008855462}
   m_UseDelaunayMesh: 0
+--- !u!114 &5357410382065900248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7208113890952025642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d4fd1979f1141c4a889b2c4277ac5bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

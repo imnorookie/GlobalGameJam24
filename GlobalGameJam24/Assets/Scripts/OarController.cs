@@ -106,7 +106,7 @@ public class OarController : MonoBehaviour
 
 		_stunCoroutine = StartCoroutine(StunCoroutine());
 
-		OnStun?.Invoke();
+		OnStun?.Invoke(); // can't seem to append listeners to this.
 	}
 
 
