@@ -535,6 +535,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1663943321966413473, guid: b55fb970fe4ffc84799fc48e156bc17d,
+        type: 3}
+      propertyPath: m_bgm
+      value: 
+      objectReference: {fileID: 8300000, guid: 8f158300ccdd9fa4594e1beeefc5e288, type: 3}
+    - target: {fileID: 1663943321966413473, guid: b55fb970fe4ffc84799fc48e156bc17d,
+        type: 3}
+      propertyPath: m_bgMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 8f158300ccdd9fa4594e1beeefc5e288, type: 3}
+    - target: {fileID: 1663943321966413473, guid: b55fb970fe4ffc84799fc48e156bc17d,
+        type: 3}
+      propertyPath: m_bgAmbience
+      value: 
+      objectReference: {fileID: 8300000, guid: 12ae3fcc8758b1c4c9b0054acf562598, type: 3}
+    - target: {fileID: 1663943321966413473, guid: b55fb970fe4ffc84799fc48e156bc17d,
+        type: 3}
+      propertyPath: m_bgMusicVol
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663943321966413473, guid: b55fb970fe4ffc84799fc48e156bc17d,
+        type: 3}
+      propertyPath: m_bgAmbienceVol
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3283656189894279301, guid: b55fb970fe4ffc84799fc48e156bc17d,
         type: 3}
       propertyPath: m_Name
