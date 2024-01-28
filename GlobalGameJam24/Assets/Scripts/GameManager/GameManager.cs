@@ -126,9 +126,14 @@ public class GameManager : MonoBehaviour
             Destroy(p);
         }
 
-        if (++pRdsWon[player] >= m_rdsToWin) { // WIN CON.
-            pRdsWon = new int[2];
-            Debug.Log("Player " + (player + 1) + " won!");
+        pRdsWon[player]++;
+		Debug.Log("Score: " + pRdsWon?[0] + " - " + pRdsWon?[1]);
+
+		if (pRdsWon[player] >= m_rdsToWin) { // WIN CON.
+            SetScoreText();
+
+			pRdsWon = new int[2];
+			Debug.Log("Player " + (player + 1) + " won!");
             gameState = GameStates.GameOver;
             menuChoice = MenuChoices.StartGame;
             renderGameOverScreen(player == 0 ? "Blue wins" : "Red wins");
@@ -351,16 +356,19 @@ public class GameManager : MonoBehaviour
             case GameStates.ControlScreen:
                 handleControlScreen();
                 break;
-            case GameStates.Playing:
-                ScoreCounterText[0].text = pRdsWon?[0].ToString();
-                ScoreCounterText[1].text = pRdsWon?[1].ToString();
+			case GameStates.Playing:
+				SetScoreText();
 				break;
-            case GameStates.GameOver:
-
-                Debug.Log("Game Over: Score: " + pRdsWon?[0] + " - " + pRdsWon?[1]);
+			case GameStates.GameOver:
                 handleGameOverInput();
                 break;
         }
         
     }
+
+	private void SetScoreText()
+	{
+		ScoreCounterText[0].text = pRdsWon?[0].ToString();
+		ScoreCounterText[1].text = pRdsWon?[1].ToString();
+	}
 }

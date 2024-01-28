@@ -12,6 +12,8 @@ public class PlayerHeadController : MonoBehaviour
 	public bool DoPrintOarSpeed = false;
 	// TODO: stun animation and such
 
+	bool _hasScored = false;
+
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
@@ -26,6 +28,7 @@ public class PlayerHeadController : MonoBehaviour
 		
 		if (collision.gameObject.CompareTag("LosingZone")) {
 			CollisionWithLosingZone();
+			_hasScored = true;
 		}
 
 	}
@@ -59,6 +62,9 @@ public class PlayerHeadController : MonoBehaviour
     }
 
 	private void CollisionWithLosingZone() {
+		if (_hasScored)
+			return;
+
 		VFXManager._instance.PlayWaterSplashVFXAtPos(transform);
 		if (this.CompareTag("P1Head"))
 			FindObjectOfType<GameManager>().RoundEnd(0);
