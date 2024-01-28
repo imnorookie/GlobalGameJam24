@@ -357,7 +357,7 @@ public class GameManager : MonoBehaviour
 				break;
             case GameStates.GameOver:
 
-                Debug.Log("Game Over: Score: " + pRdsWon?[0] + " - " + pRdsWon?[1])
+                Debug.Log("Game Over: Score: " + pRdsWon?[0] + " - " + pRdsWon?[1]);
                 handleGameOverInput();
                 break;
         }
