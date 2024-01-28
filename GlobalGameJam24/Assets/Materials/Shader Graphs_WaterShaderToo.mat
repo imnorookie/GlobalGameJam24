@@ -51,10 +51,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _First_Fresnel_Power: 2.17
+    - _First_Fresnel_Power: 0.81
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Second_Fresnel_Power: 12.8
+    - _Second_Fresnel_Power: 3
     - _Speed: 0.1
     m_Colors:
     - _Fresnel_Color: {r: 0, g: 0.97051334, b: 1, a: 0}
