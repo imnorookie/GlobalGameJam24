@@ -6,17 +6,17 @@ using UnityEngine.Events;
 public class OarController : MonoBehaviour
 {
 	[Header("Oar Controls")]
-	[SerializeField]
-    private KeyCode m_pullOarKey;
+	[Tooltip("Which player controls this oar. Player 1 uses WASD and controller 2. Player 2 uses arrowKeys and controller 1")]
+	public ControlSetEnum ControlSet = ControlSetEnum.Player1;
 
-    [SerializeField]
-    private KeyCode m_pushOarKey;
-
-    [SerializeField]
-    private KeyCode m_rowOarForwardKey;
-
-    [SerializeField]
-    private KeyCode m_rowOarBackwardKey;
+	//[SerializeField]
+	//private KeyCode m_pullOarKey;
+	//[SerializeField]
+	//private KeyCode m_pushOarKey;
+	//[SerializeField]
+	//private KeyCode m_rowOarForwardKey;
+	//[SerializeField]
+	//private KeyCode m_rowOarBackwardKey;
 
     [SerializeField]
     private Rigidbody2D m_oarRb;
@@ -51,6 +51,13 @@ public class OarController : MonoBehaviour
 	protected Coroutine _stunCoroutine;
 
 
+	public enum ControlSetEnum
+	{
+		Player1,
+		Player2,
+	}
+
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -65,19 +72,17 @@ public class OarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        _inputX = 0;
-        _inputY = 0;
-
-        // get input
-        if (Input.GetKey(m_rowOarBackwardKey))
-            _inputX = -1;
-        else if (Input.GetKey(m_rowOarForwardKey))
-            _inputX = 1;
-        if (Input.GetKey(m_pullOarKey))
-			_inputY = -1;
-		else if (Input.GetKey(m_pushOarKey))
-			_inputY = 1;
+		// get input
+		if (ControlSet == ControlSetEnum.Player1)
+		{
+			_inputX = Input.GetAxis("Player 1 Horizontal");
+			_inputY = Input.GetAxis("Player 1 Vertical");
+		}
+		else if (ControlSet == ControlSetEnum.Player2)
+		{
+			_inputX = Input.GetAxis("Player 2 Horizontal");
+			_inputY = Input.GetAxis("Player 2 Vertical");
+		}
     }
 
 
