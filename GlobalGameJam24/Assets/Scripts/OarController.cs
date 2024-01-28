@@ -99,12 +99,12 @@ public class OarController : MonoBehaviour
 	/// Stuns the character, disables input and movement for a short time
 	/// </summary>
 	/// <param name="stunDuration"></param>
-	public void Stun()
+	public void Stun(Transform head)
 	{
 		if (_stunCoroutine != null)
 			StopCoroutine(_stunCoroutine);
 
-		_stunCoroutine = StartCoroutine(StunCoroutine());
+		_stunCoroutine = StartCoroutine(StunCoroutine(head));
 
 		OnStun?.Invoke(); // can't seem to append listeners to this.
 	}
@@ -147,11 +147,15 @@ public class OarController : MonoBehaviour
 	}
 
 
-	protected IEnumerator StunCoroutine()
+	protected IEnumerator StunCoroutine(Transform head)
 	{
 		IsStunned = true;
 
+		GameObject stunVFX = VFXManager._instance.PlayStunVFXAtPos(head);
+
 		yield return new WaitForSeconds(StunDuration);
+
+		Destroy(stunVFX);
 
 		IsStunned = false;
 	}

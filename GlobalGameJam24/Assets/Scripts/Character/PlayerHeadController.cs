@@ -35,7 +35,7 @@ public class PlayerHeadController : MonoBehaviour
 		fishController?.Bite(transform, OarController.StunDuration);
 
 		SoundManager._instance.PlayFishOnPlayerCollisionSFX();
-		OarController.Stun();
+		OarController.Stun(transform);
 	}
 
 	private void CollisionWithOar(Collider2D collision)
@@ -51,7 +51,7 @@ public class PlayerHeadController : MonoBehaviour
 			Debug.Log($"{(isStunned ? "" : "NOT ")} BONKED WITH SPEED: {oarSpeed.ToString("F2")} / {MinimumOarSpeed}");
         
 		if (isStunned) {
-			OarController.Stun();
+			OarController.Stun(transform);
 			SoundManager._instance.PlayOarOnPlayerCollisionSFX();
 		}
     }
