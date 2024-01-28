@@ -273,23 +273,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7563356951247603629, guid: 94e9744baa86a7349839c77d7805f4f8,
         type: 3}
-      propertyPath: m_pullOarKey
-      value: 273
-      objectReference: {fileID: 0}
-    - target: {fileID: 7563356951247603629, guid: 94e9744baa86a7349839c77d7805f4f8,
-        type: 3}
-      propertyPath: m_pushOarKey
-      value: 274
-      objectReference: {fileID: 0}
-    - target: {fileID: 7563356951247603629, guid: 94e9744baa86a7349839c77d7805f4f8,
-        type: 3}
-      propertyPath: m_rowOarForwardKey
-      value: 276
-      objectReference: {fileID: 0}
-    - target: {fileID: 7563356951247603629, guid: 94e9744baa86a7349839c77d7805f4f8,
-        type: 3}
-      propertyPath: m_rowOarBackwardKey
-      value: 275
+      propertyPath: ControlSet
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7633602639384963222, guid: 94e9744baa86a7349839c77d7805f4f8,
         type: 3}
