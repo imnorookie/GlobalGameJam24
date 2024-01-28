@@ -30,6 +30,13 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     private AudioClip[] m_fishOnOarCollisionAudio;
 
+    [SerializeField]
+    private AudioClip m_oarEnterWaterAudio;
+
+    [SerializeField]
+    private AudioClip m_oarExitWaterAudio;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -70,5 +77,12 @@ public class SoundManager : MonoBehaviour
         playRandomAudio(m_fishOnOarCollisionAudio);
     }
 
+    public void PlayOarEnterWaterSFX() {
+        AudioSource.PlayClipAtPoint(m_oarEnterWaterAudio, Vector3.zero);
+    }
 
+    public void PlayOarExitWaterSFX() {
+        AudioSource.PlayClipAtPoint(m_oarExitWaterAudio, Vector3.zero);
+    }
+    
 }

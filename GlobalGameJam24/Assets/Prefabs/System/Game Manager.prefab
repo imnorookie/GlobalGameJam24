@@ -60,6 +60,9 @@ MonoBehaviour:
   m_fishOnOarCollisionAudio:
   - {fileID: 8300000, guid: d7450d245510cb94691a6e059148f33d, type: 3}
   - {fileID: 8300000, guid: 9d68f160eadf38644bf7f93539026159, type: 3}
+  m_oarEnterWaterAudio: {fileID: 8300000, guid: d2cdaa64d100dce4d98bdb817c98496d,
+    type: 3}
+  m_oarExitWaterAudio: {fileID: 8300000, guid: a985988466f5a654ba025b2ef2a405e6, type: 3}
 --- !u!1 &2439943120169084149
 GameObject:
   m_ObjectHideFlags: 0

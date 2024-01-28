@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,6 +10,10 @@ public class OarRowingController : MonoBehaviour
 	public float LerpSpeed = 0.25f;
 	public float WaterHeight = 0.5f;
 	public float ForceMultiplier = 100f;
+
+	// how fast the oar ought to be 4 playing SFX/VFX entering/exiting water
+	[SerializeField]
+	private float m_minimumOarSplashSpeed = 15f; 
 
 	[Header("Boat")]
 	public Rigidbody2D BoatRigidbody;
@@ -49,10 +54,17 @@ public class OarRowingController : MonoBehaviour
 
 	private void CheckIfUnderWater()
 	{
-		if (IsUnderWater && !_wasUnderWaterLastFrame)
+		
+		bool shouldSplash = VelocityMagnitude > m_minimumOarSplashSpeed / 100f;
+		
+		if (IsUnderWater && !_wasUnderWaterLastFrame && shouldSplash) {
+			SoundManager._instance.PlayOarEnterWaterSFX();
 			OnRowEnterWater?.Invoke();
-		else if (!IsUnderWater && _wasUnderWaterLastFrame)
+		}
+		else if (!IsUnderWater && _wasUnderWaterLastFrame && shouldSplash) {
+			SoundManager._instance.PlayOarExitWaterSFX();
 			OnRowExitWater?.Invoke();
+		}
 	}
 
 	private void UpdateVelocity()
