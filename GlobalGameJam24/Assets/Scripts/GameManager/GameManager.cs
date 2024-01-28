@@ -309,10 +309,16 @@ public class GameManager : MonoBehaviour
             gameState = GameStates.ControlScreen;
             m_playerSelectMenu.SetActive(false);
             SoundManager._instance.PlayOarCollisionSFX();
+<<<<<<< HEAD
             ai = false;
             startInstructions();
             // startRound();
             return;
+=======
+			startInstructions();
+			// startRound();
+			return;
+>>>>>>> 13f608949bf8788d75b3569d13a4b9efb55ec72b
         }
 
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A)) {

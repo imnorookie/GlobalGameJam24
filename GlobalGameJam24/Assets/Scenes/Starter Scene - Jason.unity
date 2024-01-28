@@ -1374,6 +1374,53 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ocean
       objectReference: {fileID: 0}
+    - target: {fileID: 7943905625536234981, guid: 9d42dfd2585c5b44c8a565fc64fab3a2,
+        type: 3}
+      propertyPath: FishRegularPrefabs.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7943905625536234981, guid: 9d42dfd2585c5b44c8a565fc64fab3a2,
+        type: 3}
+      propertyPath: FishRegularPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1686639410483980556, guid: 7147787ed2aeb084395928d29f6b4b4c,
+        type: 3}
+    - target: {fileID: 7943905625536234981, guid: 9d42dfd2585c5b44c8a565fc64fab3a2,
+        type: 3}
+      propertyPath: FishRegularPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1686639410483980556, guid: 2ddbd4cab33cffb42ac2e192fe2989ab,
+        type: 3}
+    - target: {fileID: 7943905625536234981, guid: 9d42dfd2585c5b44c8a565fc64fab3a2,
+        type: 3}
+      propertyPath: FishRegularPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1686639410483980556, guid: b0859e1343827754abbb5ed11b824a93,
+        type: 3}
+    - target: {fileID: 7943905625536234981, guid: 9d42dfd2585c5b44c8a565fc64fab3a2,
+        type: 3}
+      propertyPath: FishRegularPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 1686639410483980556, guid: 88f58df15f0d7b44cb14dbccaad98144,
+        type: 3}
+    - target: {fileID: 7943905625536234981, guid: 9d42dfd2585c5b44c8a565fc64fab3a2,
+        type: 3}
+      propertyPath: FishRegularPrefabs.Array.data[5]
+      value: 
+      objectReference: {fileID: 1686639410483980556, guid: dc6e82d620f30524e8951a4c9b02a2db,
+        type: 3}
+    - target: {fileID: 7943905625536234981, guid: 9d42dfd2585c5b44c8a565fc64fab3a2,
+        type: 3}
+      propertyPath: FishRegularPrefabs.Array.data[6]
+      value: 
+      objectReference: {fileID: 1686639410483980556, guid: 6d234a93035a80447b7321926e6d22ba,
+        type: 3}
+    - target: {fileID: 7943905625536234981, guid: 9d42dfd2585c5b44c8a565fc64fab3a2,
+        type: 3}
+      propertyPath: FishRegularPrefabs.Array.data[7]
+      value: 
+      objectReference: {fileID: 1686639410483980556, guid: 49357f9b132dc5a4090e0ebfdd7ac78d,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
