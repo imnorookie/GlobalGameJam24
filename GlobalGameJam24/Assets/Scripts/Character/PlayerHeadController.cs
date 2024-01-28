@@ -22,6 +22,8 @@ public class PlayerHeadController : MonoBehaviour
 		else if (collision.gameObject.CompareTag("Oar"))
 		{
 			CollisionWithOar(collision);
+		} else if (collision.gameObject.CompareTag("LosingZone")) {
+			CollisionWithLosingZone();
 		}
 
 	}
@@ -32,6 +34,7 @@ public class PlayerHeadController : MonoBehaviour
 
 		fishController?.Bite(transform, OarController.StunDuration);
 
+		SoundManager._instance.PlayFishOnPlayerCollisionSFX();
 		OarController.Stun();
 	}
 
@@ -47,7 +50,16 @@ public class PlayerHeadController : MonoBehaviour
 		if (DoPrintOarSpeed)
 			Debug.Log($"{(isStunned ? "" : "NOT ")} BONKED WITH SPEED: {oarSpeed.ToString("F2")} / {MinimumOarSpeed}");
         
-		if (isStunned)
+		if (isStunned) {
 			OarController.Stun();
+			SoundManager._instance.PlayOarOnPlayerCollisionSFX();
+		}
     }
+
+	private void CollisionWithLosingZone() {
+		if (this.CompareTag("P1Head"))
+			FindObjectOfType<GameManager>().RoundEnd(0);
+		else
+			FindObjectOfType<GameManager>().RoundEnd(1);
+	}
 }

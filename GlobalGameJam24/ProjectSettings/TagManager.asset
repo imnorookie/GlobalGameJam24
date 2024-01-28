@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Fish
   - Oar
+  - LosingZone
+  - P1Head
+  - P2Head
+  - Player1
+  - Player2
+  - Boat
+  - Water
   layers:
   - Default
   - TransparentFX
