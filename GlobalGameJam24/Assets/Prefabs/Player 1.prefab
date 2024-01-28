@@ -265,10 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74be235b0711a2a48b2484d1e2782376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_pullOarKey: 119
-  m_pushOarKey: 115
-  m_rowOarForwardKey: 97
-  m_rowOarBackwardKey: 100
+  ControlSet: 0
   m_oarRb: {fileID: 6387567889312860386}
   m_pushPullForce: 8
   m_rowOarForce: 0.25
@@ -338,18 +335,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2706003741528053488, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
         type: 3}
-      propertyPath: m_Radius
-      value: 0.2948763
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706003741528053488, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
-        type: 3}
       propertyPath: m_Offset.x
       value: 0.0038646758
-      objectReference: {fileID: 0}
-    - target: {fileID: 2706003741528053488, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.030196458
       objectReference: {fileID: 0}
     - target: {fileID: 3516483400197799684, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
         type: 3}
