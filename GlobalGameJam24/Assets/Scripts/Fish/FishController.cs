@@ -166,13 +166,13 @@ public class FishController : MonoBehaviour
 			!_isInBoat &&
 			transform.position.y < InWaterHeight)
 		{
+			VFXManager._instance.PlayWaterSplashVFXAtPos(transform);
 			ChangeInWaterCollisionMode(true);
 		}
 	}
 
 	public void ChangeInWaterCollisionMode(bool isInWater)
 	{
-		VFXManager._instance.PlayWaterSplashVFXAtPos(transform);
 		_rigidbody.excludeLayers = isInWater ? ExcludeLayerMaskInWater : ExcludeLayerMaskOutWater;
 		_isInWaterCollisionMode = isInWater;
 	}
