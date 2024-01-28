@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Player " + (player + 1) + " won!");
             gameState = GameStates.GameOver;
             menuChoice = MenuChoices.StartGame;
-            renderGameOverScreen(player == 0 ? "Red wins" : "Blue wins");
+            renderGameOverScreen(player == 0 ? "Blue wins" : "Red wins");
             return;
         }
 

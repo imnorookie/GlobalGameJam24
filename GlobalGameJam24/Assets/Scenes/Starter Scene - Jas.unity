@@ -159,6 +159,36 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1433683972318813916}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &614063347 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5074386674323006365, guid: 8b5b3b9140839d648beb573e73d68005,
+    type: 3}
+  m_PrefabInstance: {fileID: 1433683972318813916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &653453888 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1458247953986482123, guid: 8b5b3b9140839d648beb573e73d68005,
+    type: 3}
+  m_PrefabInstance: {fileID: 1433683972318813916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &778385597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7512440566809193500, guid: 8b5b3b9140839d648beb573e73d68005,
+    type: 3}
+  m_PrefabInstance: {fileID: 1433683972318813916}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1103244592 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2090123919574103230, guid: 8b5b3b9140839d648beb573e73d68005,
@@ -457,6 +487,27 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 621855987185285931, guid: b55fb970fe4ffc84799fc48e156bc17d,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 49.56373
+      objectReference: {fileID: 0}
+    - target: {fileID: 621855987185285931, guid: b55fb970fe4ffc84799fc48e156bc17d,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 5.7173767
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072521552678885174, guid: b55fb970fe4ffc84799fc48e156bc17d,
+        type: 3}
+      propertyPath: ScoreUI
+      value: 
+      objectReference: {fileID: 778385597}
+    - target: {fileID: 3072521552678885174, guid: b55fb970fe4ffc84799fc48e156bc17d,
+        type: 3}
+      propertyPath: m_AIPrefab
+      value: 
+      objectReference: {fileID: 5822481786426599717, guid: 127528b553862e541aa06bd12649c6a7,
+        type: 3}
     - target: {fileID: 3072521552678885174, guid: b55fb970fe4ffc84799fc48e156bc17d,
         type: 3}
       propertyPath: m_mainMenu
@@ -512,6 +563,21 @@ PrefabInstance:
       propertyPath: m_instructionScreen
       value: 
       objectReference: {fileID: 1754096870}
+    - target: {fileID: 3072521552678885174, guid: b55fb970fe4ffc84799fc48e156bc17d,
+        type: 3}
+      propertyPath: ScoreCounterText.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072521552678885174, guid: b55fb970fe4ffc84799fc48e156bc17d,
+        type: 3}
+      propertyPath: ScoreCounterText.Array.data[0]
+      value: 
+      objectReference: {fileID: 614063347}
+    - target: {fileID: 3072521552678885174, guid: b55fb970fe4ffc84799fc48e156bc17d,
+        type: 3}
+      propertyPath: ScoreCounterText.Array.data[1]
+      value: 
+      objectReference: {fileID: 653453888}
     - target: {fileID: 3283656189894279301, guid: b55fb970fe4ffc84799fc48e156bc17d,
         type: 3}
       propertyPath: m_Name
