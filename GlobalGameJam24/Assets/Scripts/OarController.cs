@@ -53,6 +53,7 @@ public class OarController : MonoBehaviour
 
 	public enum ControlSetEnum
 	{
+		ScriptDriven,
 		Player1,
 		Player2,
 	}
@@ -99,6 +100,22 @@ public class OarController : MonoBehaviour
 		if (_inputY != 0)
 			MoveY();
 	}
+
+	public void SetInputX(float input)
+	{
+		if (ControlSet == ControlSetEnum.ScriptDriven)
+		{
+			_inputX = input;
+		}
+	}
+	public void SetInputY(float input)
+	{
+		if (ControlSet == ControlSetEnum.ScriptDriven)
+		{
+			_inputY = input;
+		}
+	}
+
 
 	/// <summary>
 	/// Stuns the character, disables input and movement for a short time
