@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74be235b0711a2a48b2484d1e2782376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ControlSet: 0
+  ControlSet: 1
   m_oarRb: {fileID: 6387567889312860386}
   m_pushPullForce: 8
   m_rowOarForce: 0.35
