@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e32d4a32488a624cbbeffbce77bd5e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_boatCollisionAudio: {fileID: 8300000, guid: 269a487d1bccecd49b5b5126828c0146,
+  m_boatCollisionAudio: {fileID: 8300000, guid: cff2dbb7548c1b647a88438611e9b5e8,
     type: 3}
-  m_boatCollisionVol: 1
-  m_oarCollisionAudio: {fileID: 8300000, guid: cff2dbb7548c1b647a88438611e9b5e8, type: 3}
+  m_boatCollisionVol: 0.784
+  m_oarCollisionAudio: {fileID: 8300000, guid: 9b054eda306cabc4588dcfc0921e7ead, type: 3}
   m_oarCollisionVol: 1
   m_oarOnPlayerCollisionAudio: {fileID: 8300000, guid: e391ed4b2e732d1468b1b075ed41e805,
     type: 3}
@@ -67,15 +67,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d7450d245510cb94691a6e059148f33d, type: 3}
   - {fileID: 8300000, guid: 9d68f160eadf38644bf7f93539026159, type: 3}
   m_fishOnOarCollisionVol: 1
-  m_oarEnterWaterAudio: {fileID: 8300000, guid: d2cdaa64d100dce4d98bdb817c98496d,
+  m_oarEnterWaterAudio: {fileID: 8300000, guid: 597e9c84d8195e64bb9db2d184f4dd95,
     type: 3}
-  m_oarEnterWaterVol: 1
+  m_oarEnterWaterVol: 0.883
   m_oarExitWaterAudio: {fileID: 8300000, guid: a985988466f5a654ba025b2ef2a405e6, type: 3}
   m_oarExitWaterVol: 1
   m_bgAmbience: {fileID: 8300000, guid: 12ae3fcc8758b1c4c9b0054acf562598, type: 3}
-  m_bgAmbienceVol: 1
+  m_bgAmbienceVol: 0.17
   m_bgMusic: {fileID: 8300000, guid: 8f158300ccdd9fa4594e1beeefc5e288, type: 3}
-  m_bgMusicVol: 1
+  m_bgMusicVol: 0.164
 --- !u!1 &2439943120169084149
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,6 +199,20 @@ MonoBehaviour:
   m_p2Prefab: {fileID: 4053179584547365548, guid: 0da37846b61ba3042a940a9d95952241,
     type: 3}
   m_p2StartPos: {x: 4, y: 1, z: 0}
+  pRdsWon: 0000000000000000
+  ScoreUI: {fileID: 0}
+  ScoreCounterText: []
+  m_mainMenu: {fileID: 0}
+  m_MMStartGame: {fileID: 0}
+  m_MMCredits: {fileID: 0}
+  m_playerSelectMenu: {fileID: 0}
+  m_MM1PSelect: {fileID: 0}
+  m_MM2PSelect: {fileID: 0}
+  m_instructionScreen: {fileID: 0}
+  m_WinningScreen: {fileID: 0}
+  m_winningText: {fileID: 0}
+  m_playAgainCursor: {fileID: 0}
+  m_mainMenuCursor: {fileID: 0}
 --- !u!1 &5304559118598765488
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,9 +263,9 @@ MonoBehaviour:
   m_waterSplashPrefab: {fileID: 6159303782291571874, guid: 13d77e10534f18840947dc482ee93745,
     type: 3}
   m_waterSplashTime: 0.5
-  m_stunFreezeFrames: 15
-  zoomLvl: 1
-  zoomTime: 0.25
+  m_stunFreezeFrames: 35
+  zoomLvl: 3
+  zoomTime: 0.1
 --- !u!114 &7236389543566749798
 MonoBehaviour:
   m_ObjectHideFlags: 0
