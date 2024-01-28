@@ -4950,6 +4950,9 @@ MonoBehaviour:
   ExcludeLayerMaskOutWater:
     serializedVersion: 2
     m_Bits: 0
+  ExcluseLayerMaskReset:
+    serializedVersion: 2
+    m_Bits: 2304
   _isInWaterCollisionMode: 0
 --- !u!114 &79333923521630809
 MonoBehaviour:

@@ -13,6 +13,7 @@ public class FishSwimAction : MonoBehaviour
 	public float WaterHeight = .3f;
 	public float WaterWidth = 7f;
 
+	protected FishController _fishController;
 	protected Rigidbody2D _rigidbody2D;
 	protected Vector3 _directionNormalized = Vector3.up;
 	protected float _lookAngle;
@@ -21,6 +22,7 @@ public class FishSwimAction : MonoBehaviour
 
 	private void Awake()
 	{
+		_fishController = GetComponent<FishController>();
 		_rigidbody2D = GetComponent<Rigidbody2D>();
 	}
 
@@ -29,12 +31,9 @@ public class FishSwimAction : MonoBehaviour
 		_isOutsideWater =
 			transform.position.y > WaterHeight ||
 			Mathf.Abs(transform.position.x) > WaterWidth;
-		SetGravity();
 
-		// rotate fish to face direction of movement
-		var vel = _rigidbody2D.velocity.normalized;
-		_lookAngle = Mathf.Atan2(vel.y, vel.x) * Mathf.Rad2Deg;
-		_rigidbody2D.MoveRotation(_lookAngle);
+		SetGravity();
+		Rotate();
 	}
 
 	private void SetGravity()
@@ -44,12 +43,19 @@ public class FishSwimAction : MonoBehaviour
 		else
 		{
 			_rigidbody2D.gravityScale = 0;
-
-			//// a bit janky, SEALING THIS FOR NOW
-			//// the lower the fish is in the water, the more negative gravity (float upwards)
-			//_lerpFactor = Mathf.InverseLerp(WaterHeight, -2, transform.position.y);
-			//_rigidbody2D.gravityScale = Mathf.Lerp(0, -1, _lerpFactor);
 		}
+	}
+
+	private void Rotate()
+	{
+		// do not rotate if not swimming
+		if (!_fishController.CanSwiw)
+			return;
+
+		// rotate fish to face direction of movement
+		var vel = _rigidbody2D.velocity.normalized;
+		_lookAngle = Mathf.Atan2(vel.y, vel.x) * Mathf.Rad2Deg;
+		_rigidbody2D.MoveRotation(_lookAngle);
 	}
 
 	public void Swim(Vector3 targetPosition)

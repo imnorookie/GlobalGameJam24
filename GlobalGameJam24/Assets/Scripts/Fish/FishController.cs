@@ -22,6 +22,7 @@ public class FishController : MonoBehaviour
 	public float InWaterHeight = 0.25f;
 	public LayerMask ExcludeLayerMaskInWater;
 	public LayerMask ExcludeLayerMaskOutWater;
+	public LayerMask ExcluseLayerMaskReset; 
 
 	protected Rigidbody2D _rigidbody;
 	protected Collider2D _collider;
@@ -44,6 +45,11 @@ public class FishController : MonoBehaviour
 	}
 
 	public Vector3 NextPointPosition => _pathPoints[_currentPathIndex];
+
+	public bool CanSwiw =>
+		!_isInReset &&
+		_isInWaterCollisionMode;
+
 
 	private void Awake()
 	{
@@ -112,7 +118,8 @@ public class FishController : MonoBehaviour
 	public void SetReset(bool state)
 	{
 		_isInReset = state;
-		_collider.isTrigger = state;
+		if (state)
+			_rigidbody.excludeLayers = ExcluseLayerMaskReset;
 	}
 
 	public void UpdateInWaterCollisionMode()
@@ -172,11 +179,16 @@ public class FishController : MonoBehaviour
 		}
 	}
 
+
+
 	/// <summary>
 	/// Pathfind to the next point in the path. Tells the fish to swim.
 	/// </summary>
 	protected void Pathfind()
 	{
+		if (!CanSwiw)
+			return;
+
 		// see if is close enough to the current point
 		_distanceToNextPoint = Vector3.Distance(transform.position, NextPointPosition);
 		if (_distanceToNextPoint <= PathfindCornerDistance)
