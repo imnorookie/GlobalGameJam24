@@ -163,6 +163,7 @@ public class FishController : MonoBehaviour
 		// if the fish is out of the water, but is below the water height,
 		// switch to in water collision mode
 		else if (!_isInWaterCollisionMode &&
+			!_isInBoat &&
 			transform.position.y < InWaterHeight)
 		{
 			ChangeInWaterCollisionMode(true);
