@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Vector3 m_p2StartPos;
 
+    [SerializeField]
+    private GameObject m_creditsScreen;
+
     public int[] pRdsWon = new int[2];
 
     public GameObject ScoreUI;
@@ -58,7 +61,8 @@ public class GameManager : MonoBehaviour
         PlayerSelect,
         ControlScreen,
         MainMenu,
-        Paused
+        Paused,
+        Credits
     }
 
     private string[] cursorTags = {"MMStartGame", "MMCredits"};
@@ -181,8 +185,9 @@ public class GameManager : MonoBehaviour
         if (credits) {
             // do credits
             m_mainMenu.SetActive(false);
-            GameObject.FindGameObjectWithTag("MMCredits").SetActive(false);
             SoundManager._instance.PlayOarCollisionSFX();
+            gameState = GameStates.Credits;
+            m_creditsScreen.SetActive(true);
             return;
         }
 
@@ -338,7 +343,13 @@ public class GameManager : MonoBehaviour
             BGM.Play();
             startRound();
         }
-            
+    }
+
+    private void handleCreditsInput() {
+        if (Input.anyKeyDown) {
+            m_creditsScreen.SetActive(false);
+            startMainMenu();
+        }
     }
 
     // Update is called once per frame
@@ -361,6 +372,9 @@ public class GameManager : MonoBehaviour
 				break;
 			case GameStates.GameOver:
                 handleGameOverInput();
+                break;
+            case GameStates.Credits:
+                handleCreditsInput();
                 break;
         }
         
