@@ -209,6 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3994676328621821343}
   - component: {fileID: 7868270337311813314}
+  - component: {fileID: 7236389543566749798}
   m_Layer: 0
   m_Name: VFXManager
   m_TagString: Untagged
@@ -248,6 +249,21 @@ MonoBehaviour:
   m_waterSplashPrefab: {fileID: 6159303782291571874, guid: 13d77e10534f18840947dc482ee93745,
     type: 3}
   m_waterSplashTime: 0.5
+  m_stunFreezeFrames: 1
+  zoomLvl: 1
+  zoomTime: 0.25
+--- !u!114 &7236389543566749798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5304559118598765488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c734ea3ecb29b3b49acea7510302bbd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5475296688114234466
 GameObject:
   m_ObjectHideFlags: 0
