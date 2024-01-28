@@ -192,6 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2f7574ea1d9ffc4089df6d0af884697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_AIPrefab: {fileID: 5822481786426599717, guid: 127528b553862e541aa06bd12649c6a7,
+    type: 3}
   m_rdsToWin: 2
   m_p1Prefab: {fileID: 6099165894569433148, guid: 94e9744baa86a7349839c77d7805f4f8,
     type: 3}
@@ -200,6 +202,10 @@ MonoBehaviour:
     type: 3}
   m_p2StartPos: {x: 4, y: 1, z: 0}
   pRdsWon: 0000000000000000
+  ScoreUI: {fileID: 0}
+  ScoreCounterText:
+  - {fileID: 0}
+  - {fileID: 0}
   m_mainMenu: {fileID: 0}
   m_MMStartGame: {fileID: 0}
   m_MMCredits: {fileID: 0}
@@ -384,7 +390,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -8.079226, y: 1.6920226}
@@ -429,7 +435,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 9.917767, y: 1.6920228}
