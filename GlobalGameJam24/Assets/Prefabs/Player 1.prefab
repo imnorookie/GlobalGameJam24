@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74be235b0711a2a48b2484d1e2782376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ControlSet: 0
+  ControlSet: 1
   m_oarRb: {fileID: 6387567889312860386}
   m_pushPullForce: 8
   m_rowOarForce: 0.35
@@ -363,6 +363,11 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.023794174
       objectReference: {fileID: 0}
+    - target: {fileID: 5373917849194043641, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
+        type: 3}
+      propertyPath: m_ConnectedRigidBody
+      value: 
+      objectReference: {fileID: 1209741404819677882}
     - target: {fileID: 6219835626884557121, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
         type: 3}
       propertyPath: OarController
@@ -398,9 +403,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4977959930270853814}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &8491619748997813682 stripped
+--- !u!50 &8869723724521091025 stripped
 Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 3516483400197799684, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
+  m_CorrespondingSourceObject: {fileID: 4468365319475496295, guid: 09fcbcfe71f3eaf4c8eb19dbe9d3db36,
     type: 3}
   m_PrefabInstance: {fileID: 4977959930270853814}
   m_PrefabAsset: {fileID: 0}
@@ -656,22 +661,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedRigidBody
       value: 
-      objectReference: {fileID: 8491619748997813682}
+      objectReference: {fileID: 8869723724521091025}
     - target: {fileID: 4559187677863538590, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
         type: 3}
       propertyPath: BoatRigidbody
       value: 
       objectReference: {fileID: 1209741404819677882}
-    - target: {fileID: 4686922705718490851, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 4686922705718490851, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.364
-      objectReference: {fileID: 0}
     - target: {fileID: 4686922705718490851, guid: 128cb0297d51d2c4eab06aedb6c5aeb3,
         type: 3}
       propertyPath: m_LocalPosition.z
