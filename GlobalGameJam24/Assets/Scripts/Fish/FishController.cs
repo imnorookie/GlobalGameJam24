@@ -35,6 +35,7 @@ public class FishController : MonoBehaviour
 	[SerializeField]
 	protected bool _isInWaterCollisionMode = false;
 	protected bool _isInReset = false;
+	protected bool _isInBoat = false;
 
 
 	public enum FishTypeEnum
@@ -76,6 +77,21 @@ public class FishController : MonoBehaviour
 		CheckOutOfRange();
 	}
 
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.gameObject.CompareTag("Boat"))
+		{
+			_isInBoat = true; 
+		}
+	}
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.gameObject.CompareTag("Boat"))
+		{
+			_isInBoat = false;
+		}
+	}
+
 
 	public void Bite(Transform playerHead, float duration)
 	{
@@ -108,6 +124,9 @@ public class FishController : MonoBehaviour
 		_rigidbody.simulated = true;
 		_fishSwimAction.enabled = true;
 
+		// reset physics
+		_rigidbody.velocity = Vector2.zero;
+
 		// detach from head
 		transform.parent = transformParent;
 
@@ -126,6 +145,7 @@ public class FishController : MonoBehaviour
 	{
 		// if is in reset from a bite, reset the flag as the fish goes below water height
 		if (_isInReset &&
+			!_isInBoat &&
 			transform.position.y < InWaterHeight)
 		{
 			SetReset(false);
