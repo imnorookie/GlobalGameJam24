@@ -1685,12 +1685,12 @@ PrefabInstance:
         type: 3}
       propertyPath: ScoreCounterText.Array.data[0]
       value: 
-      objectReference: {fileID: 1433683972318813918}
+      objectReference: {fileID: 1433683972318813917}
     - target: {fileID: 3072521552678885174, guid: b55fb970fe4ffc84799fc48e156bc17d,
         type: 3}
       propertyPath: ScoreCounterText.Array.data[1]
       value: 
-      objectReference: {fileID: 1433683972318813917}
+      objectReference: {fileID: 1433683972318813918}
     - target: {fileID: 3283656189894279301, guid: b55fb970fe4ffc84799fc48e156bc17d,
         type: 3}
       propertyPath: m_Name
