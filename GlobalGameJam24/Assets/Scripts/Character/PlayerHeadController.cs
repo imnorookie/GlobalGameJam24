@@ -22,7 +22,9 @@ public class PlayerHeadController : MonoBehaviour
 		else if (collision.gameObject.CompareTag("Oar"))
 		{
 			CollisionWithOar(collision);
-		} else if (collision.gameObject.CompareTag("LosingZone")) {
+		}
+		
+		if (collision.gameObject.CompareTag("LosingZone")) {
 			CollisionWithLosingZone();
 		}
 
