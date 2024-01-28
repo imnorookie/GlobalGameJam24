@@ -33,6 +33,7 @@ public class BoatHull : MonoBehaviour
 		{
 			BoatRigidbody.useAutoMass = false;
 			BoatRigidbody.mass = _originalMass + (_fishCount * WeightPerFish);
+			OnBoatOverloaded?.Invoke();
 		}
 		else
 		{
@@ -47,6 +48,7 @@ public class BoatHull : MonoBehaviour
 		{
 			_fishCount++;
 			UpdateBoatWeight();
+			OnFishEnter?.Invoke();
 		}
 	}
 
@@ -56,6 +58,7 @@ public class BoatHull : MonoBehaviour
 		{
 			_fishCount--;
 			UpdateBoatWeight();
+			OnFishExit?.Invoke();
 		}
 	}
 }
