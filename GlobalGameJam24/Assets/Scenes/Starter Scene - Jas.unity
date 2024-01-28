@@ -474,11 +474,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6763368163820713485, guid: 5bacdfde178f66344a2f75414d13f50c,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6763368163820713485, guid: 5bacdfde178f66344a2f75414d13f50c,
-        type: 3}
       propertyPath: m_LocalPosition.y
       value: 1
       objectReference: {fileID: 0}
@@ -539,6 +534,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Game Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7868270337311813314, guid: b55fb970fe4ffc84799fc48e156bc17d,
+        type: 3}
+      propertyPath: m_stunFreezeFrames
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8757979884930775621, guid: b55fb970fe4ffc84799fc48e156bc17d,
         type: 3}
