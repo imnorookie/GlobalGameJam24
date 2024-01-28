@@ -55,7 +55,8 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Second_Fresnel_Power: 12.8
+    - _Speed: 0.1
     m_Colors:
-    - _Fresnel_Color: {r: 0, g: 0.6368191, b: 0.744, a: 0}
-    - _Glow_Color: {r: 0, g: 1.624505, b: 1.336582, a: 0}
+    - _Fresnel_Color: {r: 0, g: 0.97051334, b: 1, a: 0}
+    - _Glow_Color: {r: 0.066497535, g: 1.0844208, b: 0.3795389, a: 0}
   m_BuildTextureStacks: []
