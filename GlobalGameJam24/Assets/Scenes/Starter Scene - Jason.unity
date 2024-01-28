@@ -302,10 +302,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5995135116549609370, guid: 94e9744baa86a7349839c77d7805f4f8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6099165894569433148, guid: 94e9744baa86a7349839c77d7805f4f8,
         type: 3}
       propertyPath: m_Name
       value: Player 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6099165894569433148, guid: 94e9744baa86a7349839c77d7805f4f8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6387567889312860386, guid: 94e9744baa86a7349839c77d7805f4f8,
         type: 3}
@@ -320,6 +330,26 @@ PrefabInstance:
     - target: {fileID: 7472023838840530383, guid: 94e9744baa86a7349839c77d7805f4f8,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563356951247603629, guid: 94e9744baa86a7349839c77d7805f4f8,
+        type: 3}
+      propertyPath: m_pullOarKey
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563356951247603629, guid: 94e9744baa86a7349839c77d7805f4f8,
+        type: 3}
+      propertyPath: m_pushOarKey
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563356951247603629, guid: 94e9744baa86a7349839c77d7805f4f8,
+        type: 3}
+      propertyPath: m_rowOarForwardKey
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7563356951247603629, guid: 94e9744baa86a7349839c77d7805f4f8,
+        type: 3}
+      propertyPath: m_rowOarBackwardKey
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8491619748997813682, guid: 94e9744baa86a7349839c77d7805f4f8,
@@ -484,12 +514,12 @@ PrefabInstance:
     - target: {fileID: 7066140233694195702, guid: 7147787ed2aeb084395928d29f6b4b4c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.07
+      value: -4.196
       objectReference: {fileID: 0}
     - target: {fileID: 7066140233694195702, guid: 7147787ed2aeb084395928d29f6b4b4c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.58
+      value: 0.797
       objectReference: {fileID: 0}
     - target: {fileID: 7066140233694195702, guid: 7147787ed2aeb084395928d29f6b4b4c,
         type: 3}
@@ -778,6 +808,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 318963205171510589, guid: 0da37846b61ba3042a940a9d95952241,
+        type: 3}
+      propertyPath: m_pullOarKey
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 318963205171510589, guid: 0da37846b61ba3042a940a9d95952241,
+        type: 3}
+      propertyPath: m_pushOarKey
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 318963205171510589, guid: 0da37846b61ba3042a940a9d95952241,
+        type: 3}
+      propertyPath: m_rowOarForwardKey
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 318963205171510589, guid: 0da37846b61ba3042a940a9d95952241,
+        type: 3}
+      propertyPath: m_rowOarBackwardKey
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1558095334150895765, guid: 0da37846b61ba3042a940a9d95952241,
         type: 3}
       propertyPath: m_Sprite
@@ -798,6 +848,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053179584547365548, guid: 0da37846b61ba3042a940a9d95952241,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5513629602042678369, guid: 0da37846b61ba3042a940a9d95952241,
         type: 3}

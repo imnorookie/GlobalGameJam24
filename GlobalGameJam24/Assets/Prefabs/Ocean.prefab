@@ -86,8 +86,8 @@ MonoBehaviour:
   SpawnIntervalRandomRange: 0.5
   SpawnPositionLeft: {x: -6.2, y: -6, z: 0}
   SpawnPositionRight: {x: 6.2, y: -6, z: 0}
-  SurfacePositionLeft: {x: -6.2, y: 0, z: 0}
-  SurfacePositionRight: {x: 6.2, y: 0, z: 0}
+  SurfacePositionLeft: {x: -5.6, y: 0, z: 0}
+  SurfacePositionRight: {x: 5.6, y: 0, z: 0}
 --- !u!1 &3489712750567271024
 GameObject:
   m_ObjectHideFlags: 0
