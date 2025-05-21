@@ -33,7 +33,7 @@ public class CameraZoom : MonoBehaviour
         float curZoom = camera.orthographicSize;
         float elapsed = 0.0f;
         while (elapsed <= time) {
-            Debug.Log(curPos);
+            // Debug.Log(curPos);
             float t = elapsed / time;
 
             curPos = Vector3.Lerp(curPos, posCorrected, t);
@@ -46,7 +46,7 @@ public class CameraZoom : MonoBehaviour
             yield return null;
         }
 
-        Debug.Log("Done");
+        // Debug.Log("Done");
     }
 
 }
